@@ -8,12 +8,14 @@ import {AiOutlineWhatsApp, AiOutlineInstagram} from 'react-icons/ai';
 import {MdEmail} from 'react-icons/md';
 import {BsPhone} from 'react-icons/bs'
 
+import logoImg from './../../Assets/Menu/favicon.png'
+
 const Header: React.FC = () => {
 	return (
 			<>
 				<FirstHeader>
 					<div>
-						<p>CNPJ: xx.xxx.xxx/xxxx-xx</p>
+						
 						<p>Filantropia Premiável Regulamentada na LEI FEDERAL Nº 13.019/14 ART. 84 B, 84</p>
 					</div>
 
@@ -25,13 +27,13 @@ const Header: React.FC = () => {
 						</button>
 
 						<button>
-							<a href="https://www.instagram.com/lsiebra21">
+							<a href="https://www.instagram.com/cariririfas">
 								<AiOutlineInstagram size={20}/>
 							</a>	
 						</button>
 						
 						<button>
-							<a href="mailto:levils11@gmail.com">		
+							<a href="mailto:levils114@gmail.com">		
 								<MdEmail size={20}/>
 							</a>	
 						</button>
@@ -46,7 +48,10 @@ const Header: React.FC = () => {
 
 				<HeaderPrimary>
 					<header>
-						<p>ICON</p>
+						<div>
+							<img src={logoImg} alt="logo"/>
+							<p>Cariri Rifas</p>
+						</div>
 
 						<nav>
 					        <Link to="/" className="hvr-underline-from-center">
@@ -61,9 +66,15 @@ const Header: React.FC = () => {
 					          Como Pagar
 					        </Link>
 
+					        <Link to="/filantropia-premiada" className="hvr-underline-from-center">
+					          Filantropia
+					        </Link>
+
 					        <Link to="/contatos" className="hvr-underline-from-center">
 					          Contatos
 					        </Link>
+
+					        
 					     </nav>
 				     </header>
 				</HeaderPrimary>

@@ -85,14 +85,26 @@ export const HeaderPrimary = styled.div`
 	    align-items: center;
 	    justify-content: space-between;
 
-	    p{
-	    	font-size: 30px;
-	    	font-weight: 500;
-	    	margin-top: 20px;
-	    	color: #FDD269;
-	    }
+	    div{
+	    	display: flex;
+	    	margin-top: 8px;
+
+		    p{
+		    	font-size: 30px;
+		    	font-weight: 500;
+		    	margin-top: 14px;
+		    	color: #CCAD1E;
+		    }
+
+		    img{
+		    	height: 70px;
+		    	width: 70px;
+		    	
+		    }
+		}
 
 	    nav {
+	    	margin-top: -10px;
 	      a {
 	        color: #fff;
 	        text-decoration: none;
@@ -127,7 +139,7 @@ export const HeaderPrimary = styled.div`
 	        left: 51%;
 	        right: 51%;
 	        bottom: 0;
-	        background: #FDD269;
+	        background: #CCAD1E;
 	        height: 4px;
 	        -webkit-transition-property: left, right;
 	        transition-property: left, right;
