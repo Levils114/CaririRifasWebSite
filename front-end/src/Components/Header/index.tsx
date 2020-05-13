@@ -55,7 +55,7 @@ const Header: React.FC = () => {
 
 						<nav>
 					        <Link to="/" className="hvr-underline-from-center">
-					          Menu
+					          Início
 					        </Link>
 
 					        <Link to="/sorteios" className="hvr-underline-from-center">
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
 					          Filantropia
 					        </Link>
 
-					        <Link to="/contatos" className="hvr-underline-from-center">
+					        <Link to="/contatos" className="hvr-underline-from-center" id="lastLink">
 					          Contatos
 					        </Link>
 

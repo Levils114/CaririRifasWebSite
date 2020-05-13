@@ -6,8 +6,12 @@ interface ButtonProps{
 }
 
 export const Container = styled.div`
-	max-width: 100%;
-	
+
+	div.footer{
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+	}
 	
 	div.img-background{
 		img{
@@ -53,7 +57,7 @@ export const Container = styled.div`
 			margin-top: 350px;
 			padding: 20px 20px;
 			border-radius: 5px;
-			border-color: #fff;
+			border: 2px solid #fff;
 			transition: all 0.2s;
 
 			&:hover{
@@ -91,16 +95,22 @@ export const Container = styled.div`
 		p.main{
 			font-weight: 500;
 			font-size: 30px;
-			margin-left: 620px;
+			
 			margin-top: 25px;
 			margin-bottom: 10px;
 			color: #fff;
+			text-align: center;
 		}
 
 		div.divisor{
+			
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			
 			button{
 				border: 0px;
-				margin-left: 663px;
+				
 				padding: 1px 30px;
 				cursor: default;
 				margin-bottom: 50px;
@@ -123,7 +133,7 @@ export const Container = styled.div`
 				}
 
 				&:hover{
-					transform: translateY(-10px);
+					transform: translateY(-5px);
 				}
 
 				p.emBreve{

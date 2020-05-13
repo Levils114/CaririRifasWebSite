@@ -79,7 +79,7 @@ export const HeaderPrimary = styled.div`
 
 
 	header {
-	    width: 1120px;
+	    width: auto;
 	    margin: 0 auto;
 	    display: flex;
 	    align-items: center;
@@ -99,6 +99,7 @@ export const HeaderPrimary = styled.div`
 		    img{
 		    	height: 70px;
 		    	width: 70px;
+		    	margin-left: 100px;
 		    	
 		    }
 		}
@@ -119,6 +120,10 @@ export const HeaderPrimary = styled.div`
 	          opacity: 0.6;
 	          transform: scale(1.3);
 	        }
+	      }
+
+	      a#lastLink{
+	      	margin-right: 60px;
 	      }
 
 	      a.hvr-underline-from-center {

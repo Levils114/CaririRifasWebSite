@@ -40,7 +40,7 @@ const Menu = () => {
 		              <span>CRUZE LT TURBO</span>
 		              <p className="ano">2017</p>
 		              <button>
-		              	<Link to="/teste">PARTICIPE</Link>
+		              	<Link to="/teste">EM BREVE</Link>
 		              </button>
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um carro</p>	
 		              <img src={img1} alt="slideImg1"/>
@@ -52,7 +52,7 @@ const Menu = () => {
 		              <span>LANDER 255CC</span>
 		              <p className="ano">2017</p>
 		              <button>
-		              	<Link to="/teste">PARTICIPE</Link>
+		              	<Link to="/teste">Encerrado</Link>
 		              </button>	
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um moto</p>	
 		              <img src={img2} alt="slideImg2"/>
@@ -114,7 +114,9 @@ const Menu = () => {
 			     </div>
 		     </div>
 
-		     <Footer />
+		     <div className="footer">
+		     	<Footer />
+		     </div>
 	        </Container>
 		</>	
 	);

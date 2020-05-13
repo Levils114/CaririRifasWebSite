@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
 					          <MdEmail size={20}/>
 					        </a>
 
-					        <a href="tel:+55(88)99813-9342">
+					        <a className="lastLink" href="tel:+55(88)99813-9342">
 					          <BsPhone size={20}/>
 					        </a>
 					     </nav>
