@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const Filtros = styled.div`
 
-	height: 426px;
+	height: 540px;
 
 	div.filtros{
 		margin-left: 79px;

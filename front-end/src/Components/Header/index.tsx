@@ -6,7 +6,7 @@ import { FirstHeader, HeaderPrimary } from './styles';
 
 import {AiOutlineWhatsApp, AiOutlineInstagram} from 'react-icons/ai';
 import {MdEmail} from 'react-icons/md';
-import {BsPhone} from 'react-icons/bs'
+import {BsPhone} from 'react-icons/bs';
 
 import logoImg from './../../Assets/Menu/favicon.png'
 
