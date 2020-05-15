@@ -40,7 +40,7 @@ const Menu = () => {
 		              <span>CRUZE LT TURBO</span>
 		              <p className="ano">2017</p>
 		              <button>
-		              	<Link to="/teste">EM BREVE</Link>
+		              	<Link to="/sorteio/cruzer-lt-turbo">EM BREVE</Link>
 		              </button>
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um carro</p>	
 		              <img src={img1} alt="slideImg1"/>

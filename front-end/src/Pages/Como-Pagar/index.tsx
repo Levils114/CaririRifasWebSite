@@ -30,7 +30,7 @@ const ComoPagar: React.FC = () => {
 
 				<div className="dadosContainer">
 					<div className="dados">
-						<img src={img1} />
+						<img src={img1} alt="img1"/>
 						<p>Bradesco</p>
 						<p>Titular: Alexandre A Tavares</p>
 						<p>CPF: 016.310.343-75</p>
@@ -39,7 +39,7 @@ const ComoPagar: React.FC = () => {
 					</div>
 
 					<div className="dados">
-						<img src={img2} />
+						<img src={img2} alt="img2"/>
 						<p>Sicredi</p>
 						<p>Titular: Alexandre A Tavares</p>
 						<p>CPF: 016.310.343-75</p>
@@ -49,7 +49,7 @@ const ComoPagar: React.FC = () => {
 					</div>
 
 					<div className="dados">
-						<img src={img3} />
+						<img src={img3} alt="img3"/>
 						<p>Caixa</p>
 						<p>Titular: Renato S Nepomuceno </p>
 						<p>CPF: 108.177.904-70</p>
@@ -60,7 +60,7 @@ const ComoPagar: React.FC = () => {
 					</div>
 
 					<div className="dados">
-						<img src={img4} />
+						<img src={img4} alt="img4"/>
 						<p>Banco do Brasil</p>
 						<p>Titular: Renato S Nepomuceno</p>
 						<p>CPF: 108.177.904-704</p>
