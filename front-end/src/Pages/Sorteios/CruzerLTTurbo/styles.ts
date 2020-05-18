@@ -48,6 +48,7 @@ export const Container = styled.div`
 	div.rifas{
 		margin-left: 130px;
 		margin-right: 130px;
+		margin-bottom: 30px;
 
 		button{
 			border: 0px;

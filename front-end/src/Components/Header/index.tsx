@@ -55,23 +55,23 @@ const Header: React.FC = () => {
 
 						<nav>
 					        <Link to="/" className="hvr-underline-from-center">
-					          Início
+					          INÍCIO
 					        </Link>
 
 					        <Link to="/sorteios" className="hvr-underline-from-center">
-					          Sorteios
+					          SORTEIOS
 					        </Link>
 
 					        <Link to="/como-pagar" className="hvr-underline-from-center">
-					          Como Pagar
+					          COMO PAGAR
 					        </Link>
 
 					        <Link to="/filantropia-premiada" className="hvr-underline-from-center">
-					          Filantropia
+					          FILANTROPIA
 					        </Link>
 
 					        <Link to="/contatos" className="hvr-underline-from-center" id="lastLink">
-					          Contatos
+					          CONTATOS
 					        </Link>
 
 					        

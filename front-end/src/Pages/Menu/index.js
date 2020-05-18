@@ -40,7 +40,7 @@ const Menu = () => {
 		              <span>CRUZE LT TURBO</span>
 		              <p className="ano">2017</p>
 		              <button>
-		              	<Link to="/sorteio/cruzer-lt-turbo">EM BREVE</Link>
+		              	<Link to="/sorteio/cruzer-lt-turbo">PARTICIPE</Link>
 		              </button>
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um carro</p>	
 		              <img src={img1} alt="slideImg1"/>
@@ -52,7 +52,7 @@ const Menu = () => {
 		              <span>LANDER 255CC</span>
 		              <p className="ano">2017</p>
 		              <button>
-		              	<Link to="/teste">Encerrado</Link>
+		              	<Link to="/teste">ENCERRADO</Link>
 		              </button>	
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um moto</p>	
 		              <img src={img2} alt="slideImg2"/>
@@ -64,7 +64,7 @@ const Menu = () => {
 		              <span>LAND ROVER</span>
 		              <p className="ano">2017</p>
 		              <button>
-		              	<Link to="/teste">PARTICIPE</Link>
+		              	<Link to="/teste">EM BREVE</Link>
 		              </button>
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um carro</p>		
 		              <img src={img3} alt="slideImg3"/>
@@ -84,11 +84,21 @@ const Menu = () => {
 			     <div className="sorteios">
 			     	<div className="model">
 			     		<p className="emBreve">Em Breve</p>
-				     	<img src={img4} alt="sorteioImg1"/>
-				     	<p className="modelo">Cruzer LT Turbo</p>
+				     	<img src={img6} alt="sorteioImg2"/>
+				     	<p className="modelo">Range Rover</p>
 				     	<p className="data">Sorteio dia 11/05/2020</p>
 				     	<Button typeOfButton="emBreve">
 				     		<Link>Em Breve ✔</Link>
+				     	</Button>
+			     	</div>
+
+			     	<div className="model">
+			     		<p className="comprar">Comprar</p>
+				     	<img src={img4} alt="sorteioImg1"/>
+				     	<p className="modelo">Cruzer LT Turbo</p>
+				     	<p className="data">Sorteio dia 11/05/2020</p>
+				     	<Button typeOfButton="comprar">
+				     		<Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
 				     	</Button>
 			     	</div>
 
@@ -99,16 +109,6 @@ const Menu = () => {
 				     	<p className="data">Sorteio dia 11/05/2020</p>
 				     	<Button typeOfButton="terminado">
 				     		<Link>Ver Resultado ✔</Link>
-				     	</Button>
-			     	</div>
-
-			     	<div className="model">
-			     		<p className="comprar">Comprar</p>
-				     	<img src={img6} alt="sorteioImg2"/>
-				     	<p className="modelo">Range Rover</p>
-				     	<p className="data">Sorteio dia 11/05/2020</p>
-				     	<Button typeOfButton="comprar">
-				     		<Link>Comprar Rifa ✔</Link>
 				     	</Button>
 			     	</div>
 			     </div>

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, FormEvent } from 'react';
+
+import api from './../../../../Service/api';
 
 import { useRouteMatch, Link } from 'react-router-dom';
 
@@ -17,7 +19,32 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 
 	const {params} = useRouteMatch<NumberParams>();
 
-	console.log(params);
+	const [name, setName] = useState('');
+	const sorteio = 'Cruzer LT Turbo';
+	const [email, setEmail] = useState('');
+	const [phone, setPhone] = useState('');
+	const rifa = params.number;
+
+	
+
+	async function handdleUserCadast(event: FormEvent<HTMLFormElement>){
+		try{
+			event.preventDefault();
+
+			const data = {name, sorteio, email, phone, rifa};
+
+			const reponse = await api.post('/users', data);
+
+			setName('');
+			setEmail('');
+			setPhone('');
+
+			alert('Seu Cadastro foi bem sucedido. Aguarde o dia do sorteio.');
+		} catch(err){
+			alert(err.message);
+		}	
+
+	}
 
 	return(
 			<Container>
@@ -32,22 +59,19 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 								</Link>	
 							</div>	
 							<h1>Cadastro</h1>
-							<form>
-
-								
-								<input name="nome" value="Cruzer LT Turbo" type="hidden"/>
+							<form onSubmit={handdleUserCadast}>
 
 								<p>Nome Completo:</p>
-								<input name="nome" />
+								<input value={name} onChange={e => setName(e.target.value)} name="nome" placeholder="Escreva seu nome completo"/>
 
 								<p>E-mail:</p>
-								<input name="email"/>
+								<input value={email} onChange={e => setEmail(e.target.value)} name="email" placeholder="Escreva seu e-mail"/>
 
 								<p>Telefone:</p>
-								<input name="phone" type="tel" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"/>
+								<input value={phone} onChange={e => setPhone(e.target.value)} name="phone" type="tel" placeholder="Ex: (xx) xxxxx-xxxx" />
 
 								<p>Rifa:</p>
-								<input readOnly value={`${params.number}`} />
+								<input readOnly placeholder={`${params.number}`} />
 
 								<div className="buttons">
 									<button type="reset" className="resetar">Cancelar</button>

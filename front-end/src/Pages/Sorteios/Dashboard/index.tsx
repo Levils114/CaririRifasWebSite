@@ -64,13 +64,24 @@ const Sorteios: React.FC = () => {
 					{todos===true && (
 							<SorteiosPage>
 								<div className="sorteios">
+
+									<div className="model" id="aberto">
+							     		<p className="emBreve">Em Breve</p>
+								     	<img src={img6} alt="sorteioImg2"/>
+								     	<p className="modelo">Range Rover</p>
+								     	<p className="data">Sorteio dia 11/05/2020</p>
+								     	<Button typeOfButton="emBreve">
+								     		<Link to="teste">Em Breve ✔</Link>
+								     	</Button>
+							     	</div>
+
 									<div className="model" id="emBreve">
-								     	<p className="emBreve">Em Breve</p>
+								     	<p className="comprar">Comprar</p>
 									     <img src={img4} alt="sorteioImg1"/>
 									     <p className="modelo">Cruzer LT Turbo</p>
 									     <p className="data">Sorteio dia 11/05/2020</p>
-									     <Button typeOfButton="emBreve">
-									     	<Link to="/sorteio/cruzer-lt-turbo">Em Breve ✔</Link>
+									     <Button typeOfButton="comprar">
+									     	<Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
 									     </Button>
 								     </div>
 
@@ -84,15 +95,6 @@ const Sorteios: React.FC = () => {
 								     	</Button>
 							     	</div>
 
-							     	<div className="model" id="aberto">
-							     		<p className="comprar">Comprar</p>
-								     	<img src={img6} alt="sorteioImg2"/>
-								     	<p className="modelo">Range Rover</p>
-								     	<p className="data">Sorteio dia 11/05/2020</p>
-								     	<Button typeOfButton="comprar">
-								     		<Link to="teste">Comprar Rifa ✔</Link>
-								     	</Button>
-							     	</div>
 								</div> 
 		    
 							</SorteiosPage>
@@ -101,15 +103,15 @@ const Sorteios: React.FC = () => {
 					{abertos===true && (
 						<SorteiosPage>
 							<div className="sorteios">
-								<div className="model" id="aberto">
-						     		<p className="comprar">Comprar</p>
-							     	<img src={img6} alt="sorteioImg2"/>
-							     	<p className="modelo">Range Rover</p>
-							     	<p className="data">Sorteio dia 11/05/2020</p>
-							     	<Button typeOfButton="comprar">
-							     		<Link to="teste">Comprar Rifa ✔</Link>
-							     	</Button>
-						     	</div>
+								<div className="model" id="emBreve">
+								     <p className="comprar">Comprar</p>
+									 <img src={img4} alt="sorteioImg1"/>
+									 <p className="modelo">Cruzer LT Turbo</p>
+									 <p className="data">Sorteio dia 11/05/2020</p>
+									 <Button typeOfButton="comprar">
+									    <Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
+									 </Button>
+								</div>
 						     </div>	
 						</SorteiosPage>
 						)}
@@ -117,15 +119,15 @@ const Sorteios: React.FC = () => {
 					{emBreve===true && (
 						<SorteiosPage>
 							<div className="sorteios">
-								<div className="model" id="emBreve">
-								     	<p className="emBreve">Em Breve</p>
-									     <img src={img4} alt="sorteioImg1"/>
-									     <p className="modelo">Cruzer LT Turbo</p>
-									     <p className="data">Sorteio dia 11/05/2020</p>
-									     <Button typeOfButton="emBreve">
-									     	<Link to="teste">Em Breve ✔</Link>
-									     </Button>
-								     </div>
+								<div className="model" id="aberto">
+							     		<p className="emBreve">Em Breve</p>
+								     	<img src={img6} alt="sorteioImg2"/>
+								     	<p className="modelo">Range Rover</p>
+								     	<p className="data">Sorteio dia 11/05/2020</p>
+								     	<Button typeOfButton="emBreve">
+								     		<Link to="teste">Em Breve ✔</Link>
+								     	</Button>
+							     	</div>
 						     </div>	
 						</SorteiosPage>
 						)}
