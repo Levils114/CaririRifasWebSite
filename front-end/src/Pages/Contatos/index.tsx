@@ -44,7 +44,7 @@ const Contatos: React.FC = () => {
 								</div>	
 
 								<div className="explainDescription">
-									<p>O primeiro passo para participar de nossas rifas, é escolher a rifa que você quer participar. Você pode fazer isso acessando a aba <Link to="/sorteios">Sorteios</Link>.</p>
+									<p>O primeiro passo para participar de nossas rifas, é escolher o sorteio que você quer participar. Você pode fazer isso acessando a aba <Link to="/sorteios">Sorteios</Link>.</p>
 								</div>
 							</div>
 

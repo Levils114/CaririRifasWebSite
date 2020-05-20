@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 import api from './../../../../Service/api';
 
@@ -6,50 +6,101 @@ import { useRouteMatch, Link } from 'react-router-dom';
 
 import {Container} from './styles';
 
+import {Form} from '@unform/web';
+import {FormHandles} from '@unform/core';
+
 import Header from './../../../../Components/Header/';
 import Footer from './../../../../Components/Footer/';
+import Input from './../../../../Components/Input/';
 
-import {FiArrowLeft} from 'react-icons/fi';
+
+import {FiArrowLeft, FiAtSign} from 'react-icons/fi';
+import {IoMdPerson} from 'react-icons/io';
+import {FaPhoneAlt} from 'react-icons/fa';
+import {AiOutlineFieldNumber} from 'react-icons/ai';
+
+
+import * as Yup from 'yup';
+import getValidationErrors from './../../../../Utils/getValidationErrors';
 
 interface NumberParams{
 	number: string;
+}
+
+interface User{
+	rifa: string;
 }
 
 const CadastroCruzerLTTurbo: React.FC = () => {
 
 	const {params} = useRouteMatch<NumberParams>();
 
+	const formRef = useRef<FormHandles>(null);
+
 	const [name, setName] = useState('');
 	const sorteio = 'Cruzer LT Turbo';
 	const [email, setEmail] = useState('');
 	const [phone, setPhone] = useState('');
 	const rifa = params.number;
+	const [rifaUsed, setRifaUsed] = useState<string[]>([]);
 
-	
-
-	async function handdleUserCadast(event: FormEvent<HTMLFormElement>){
+	async function handdleUserCadast(data: object){
 		try{
-			event.preventDefault();
+			
+
+			formRef.current?.setErrors({});
+
+			const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
+			const schema = Yup.object().shape({
+				name: Yup.string().required('Nome Obrigatório'),
+				email: Yup.string().required('E-mail Obrigatório').email('Email inválido'),
+				phone: Yup.string().required('Telefone Obrigatório').matches(phoneRegExp, 'Número Inválido')
+			});
+
 
 			const data = {name, sorteio, email, phone, rifa};
 
-			const reponse = await api.post('/users', data);
+			await schema.validate(data, {
+				abortEarly: false
+			})
+
+			const response = await api.post('/users', data);
 
 			setName('');
 			setEmail('');
 			setPhone('');
 
-			alert('Seu Cadastro foi bem sucedido. Aguarde o dia do sorteio.');
+			alert('Seu Cadastro foi bem sucedido. Faça o pagamento e nos envie via Whatsapp o comprovante.');
 		} catch(err){
-			alert(err.message);
+			const errors = getValidationErrors(err);
+			formRef.current?.setErrors(errors);
 		}	
 
 	}
+
+	function handdleDeleteData(){
+		setName('');
+		setEmail('');
+		setPhone('');
+	}
+
+	useEffect(() => {
+		api.get('/users').then(response => {setRifaUsed([...rifaUsed, response.data.users])})
+		
+
+
+	}, []);
+
+	console.log(rifaUsed);
+
 
 	return(
 			<Container>
 				<Header />
 					<div className="formContainer">
+
+
 
 						<div className="form">
 							<div className="voltar">
@@ -59,29 +110,35 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 								</Link>	
 							</div>	
 							<h1>Cadastro</h1>
-							<form onSubmit={handdleUserCadast}>
+							<Form ref={formRef} onSubmit={handdleUserCadast}>
 
 								<p>Nome Completo:</p>
-								<input value={name} onChange={e => setName(e.target.value)} name="nome" placeholder="Escreva seu nome completo"/>
+
+								<Input icon={IoMdPerson} value={name} onChange={e => setName(e.target.value)} name="name" placeholder="Escreva seu nome completo"/>
 
 								<p>E-mail:</p>
-								<input value={email} onChange={e => setEmail(e.target.value)} name="email" placeholder="Escreva seu e-mail"/>
+								<Input icon={FiAtSign} value={email} onChange={e => setEmail(e.target.value)} name="email" placeholder="Escreva seu e-mail"/>
 
 								<p>Telefone:</p>
-								<input value={phone} onChange={e => setPhone(e.target.value)} name="phone" type="tel" placeholder="Ex: (xx) xxxxx-xxxx" />
+							
+								<Input icon={FaPhoneAlt} value={phone} onChange={e => setPhone(e.target.value)} name="phone" type="tel" placeholder="Escreva seu número"/>
+							
 
 								<p>Rifa:</p>
-								<input readOnly placeholder={`${params.number}`} />
+								<Input icon={AiOutlineFieldNumber} readOnly placeholder={`${params.number}`} name="rifa"/>
 
 								<div className="buttons">
-									<button type="reset" className="resetar">Cancelar</button>
+									<button type="reset" className="resetar" onClick={handdleDeleteData}>Cancelar</button>
 									<button type="submit" className="enviar">Enviar</button>
 								</div>
 
-							</form>
+							</Form>
 						</div>
 					</div>	
-				<Footer />
+				<div className="footer">	
+					<Footer />
+				</div>	
+				
 			</Container>
 		);
 }

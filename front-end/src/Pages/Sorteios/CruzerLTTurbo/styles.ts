@@ -53,7 +53,8 @@ export const Container = styled.div`
 		button{
 			border: 0px;
 			background: transparent;
-			padding: 5px 1px;
+			padding: 5.5px 1px;
+			
 
 			a{
 				padding: 5px 10px;
@@ -63,6 +64,8 @@ export const Container = styled.div`
 				border-radius: 20px;
 				background: #000
 			}
+
+			
 		}
 	}
 

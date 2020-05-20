@@ -2,6 +2,10 @@ import {Router, Request, Response} from 'express';
 
 import CreateUserService from './../services/createUserService';
 
+import {getRepository} from 'typeorm';
+
+import User from './../models/Users';
+
 const userRouter = Router();
 
 userRouter.post('/', async (request: Request, response: Response) => {
@@ -18,6 +22,14 @@ userRouter.post('/', async (request: Request, response: Response) => {
 	}
 		
 });
+
+userRouter.get('/', async (request: Request, response: Response) => {
+	const userRepository = getRepository(User);
+	const users = await userRepository.find();
+
+	return response.json({users});
+
+})
 
 
 export default userRouter;

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+	
+
 	div.formContainer{
 		display: flex;
 		width: auto;
@@ -40,17 +42,10 @@ export const Container = styled.div`
 				p{
 					font-size: 18px;
 					margin-bottom: 8px;
+					margin-top: 8px;
 				}
 
-				input{
-					background: #d1d1d1;
-					border: 0px;
-					border-radius: 5px;
-					padding: 10px 10px;
-					width: 50%;
-					height: 30%;
-					margin-bottom: 16px;
-				}
+				
 
 				div.buttons{
 
