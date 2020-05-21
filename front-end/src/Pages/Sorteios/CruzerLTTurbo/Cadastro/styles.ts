@@ -56,7 +56,7 @@ export const Container = styled.div`
 						height: 50px;
 						border: 0px;
 						border-radius: 5px;
-						margin-top: 8px;
+						margin-top: 20px;
 						margin-left: 20px;
 						font-size: 17px;
 						color: #fff;

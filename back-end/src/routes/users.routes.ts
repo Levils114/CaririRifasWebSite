@@ -21,13 +21,14 @@ userRouter.post('/', async (request: Request, response: Response) => {
 		return response.json({ Error: err.message })
 	}
 		
+
 });
 
 userRouter.get('/', async (request: Request, response: Response) => {
 	const userRepository = getRepository(User);
-	const users = await userRepository.find();
+	const user = await userRepository.find();
 
-	return response.json({users});
+	return response.json(user);
 
 })
 

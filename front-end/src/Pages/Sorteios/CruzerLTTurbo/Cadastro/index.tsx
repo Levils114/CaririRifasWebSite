@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 
 import api from './../../../../Service/api';
 
@@ -42,11 +42,12 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 	const [email, setEmail] = useState('');
 	const [phone, setPhone] = useState('');
 	const rifa = params.number;
-	const [rifaUsed, setRifaUsed] = useState<string[]>([]);
+	const [rifaUsed, setRifaUsed] = useState<User[]>([]);
+	const [rifaAlreadyUsed, setRifaAlreadyUsed] = useState<User[]>([]);
+	const rifaIndex = rifaUsed.findIndex(user => user.rifa === rifa);
 
 	async function handdleUserCadast(data: object){
 		try{
-			
 
 			formRef.current?.setErrors({});
 
@@ -63,7 +64,14 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 
 			await schema.validate(data, {
 				abortEarly: false
-			})
+			});
+
+			if (rifaIndex > 0){
+				setName('');
+				setEmail('');
+				setPhone('');
+				return alert('Está rifa já está reservada');
+			}
 
 			const response = await api.post('/users', data);
 
@@ -71,7 +79,8 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 			setEmail('');
 			setPhone('');
 
-			alert('Seu Cadastro foi bem sucedido. Faça o pagamento e nos envie via Whatsapp o comprovante.');
+			return alert('Seu Cadastro foi bem sucedido. Faça o pagamento e nos envie via Whatsapp o comprovante.');
+			
 		} catch(err){
 			const errors = getValidationErrors(err);
 			formRef.current?.setErrors(errors);
@@ -86,22 +95,15 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 	}
 
 	useEffect(() => {
-		api.get('/users').then(response => {setRifaUsed([...rifaUsed, response.data.users])})
-		
-
-
+		api.get('/users').then(response => {setRifaUsed(response.data)});		
 	}, []);
-
-	console.log(rifaUsed);
 
 
 	return(
 			<Container>
 				<Header />
 					<div className="formContainer">
-
-
-
+					
 						<div className="form">
 							<div className="voltar">
 								<Link to="/sorteio/cruzer-lt-turbo">
