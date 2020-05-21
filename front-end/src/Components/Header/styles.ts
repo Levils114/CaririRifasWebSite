@@ -4,18 +4,13 @@ export const FirstHeader = styled.div`
 	display: flex;
 	background: #2e2e2e;
 	height: 30px;
-	width: auto;
+	width: 100%;
 	align-items: center;
 	justify-content: space-between;
 
 	p{
 		margin-left: 20px;
 		font-weight: 500;
-
-		& + p{
-			margin-left: 16px;
-
-		}
 	}
 
 	div{
@@ -29,7 +24,7 @@ export const FirstHeader = styled.div`
 		border: 0;
 
 		& + button{
-			margin-left: 16px;
+			margin-left: 8px;
 		} 
 
 		a{
@@ -75,19 +70,20 @@ export const FirstHeader = styled.div`
 
 export const HeaderPrimary = styled.div`
 	background-color: #0d0d0d;
-	height: 80px;
+	height: 130px;
+	
 
 
 	header {
-	    width: auto;
+	    width: 100%;
 	    margin: 0 auto;
 	    display: flex;
-	    align-items: center;
+		align-items: center;
 	    justify-content: space-between;
 
 	    div{
 	    	display: flex;
-	    	margin-top: 8px;
+	    	
 
 		    p{
 		    	font-size: 30px;
@@ -97,8 +93,8 @@ export const HeaderPrimary = styled.div`
 		    }
 
 		    img{
-		    	height: 70px;
-		    	width: 70px;
+		    	height: 140px;
+		    	width: 210px;
 		    	margin-left: 100px;
 		    	
 		    }

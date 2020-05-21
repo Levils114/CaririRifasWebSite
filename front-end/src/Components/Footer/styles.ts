@@ -1,36 +1,44 @@
 import styled from 'styled-components';
 
+import marcaDagua from './../../Assets/Menu/marcadagua.png'
+
 
 export const FooterPrimary = styled.div`
-	background-color: #0d0d0d;
-	height: 120px;
-	width: auto;
+	background: #0d0d0d url(${marcaDagua}) no-repeat 50% ;
+	width: 100%;
 	
 
 
 	header {
+		height: 180px;
 	    margin: 0 auto;
 	    display: flex;
 		justify-content: space-between;
 		align-items: center;
 	    
 	    div{
-	    	margin-top: 8px;
+	    	
 	    	align-items: center;
+	    	
 
 	    	p{
 		    	font-size: 16px;
 		    	font-weight: 500;
-		    	margin-top: 20px;
 		    	margin-left: 34px;
+
+		    	& + p{
+		    		margin-top:24px;
+		    	}
 		    }
 	    }
 
 	    
 	    nav{
+
+
 		    a{
 		    	color: #d1d1d1;
-		    	margin-left: 833px;
+		    	
 
 		    	& + a{
 					margin-left: 4px;
@@ -43,7 +51,7 @@ export const FooterPrimary = styled.div`
 
 		    svg{
 				transition: all 0.2s;
-				margin-top: 28px;
+				
 			}
 
 			a:hover svg{

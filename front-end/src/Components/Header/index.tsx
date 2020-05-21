@@ -6,9 +6,9 @@ import { FirstHeader, HeaderPrimary } from './styles';
 
 import {AiOutlineWhatsApp, AiOutlineInstagram} from 'react-icons/ai';
 import {MdEmail} from 'react-icons/md';
-import {BsPhone} from 'react-icons/bs';
 
-import logoImg from './../../Assets/Menu/favicon.png'
+
+import logoImg from './../../Assets/Menu/logo2.png'
 
 const Header: React.FC = () => {
 	return (
@@ -32,17 +32,12 @@ const Header: React.FC = () => {
 							</a>	
 						</button>
 						
-						<button>
+						<button className="lastButton">
 							<a href="mailto:levils114@gmail.com">		
 								<MdEmail size={20}/>
 							</a>	
 						</button>
 
-						<button className="lastButton">
-							<a href="tel:+55(88)99813-9342">
-								<BsPhone size={20}/>
-							</a>	
-						</button>
 					</div>
 				</FirstHeader>
 
@@ -50,7 +45,6 @@ const Header: React.FC = () => {
 					<header>
 						<div>
 							<img src={logoImg} alt="logo"/>
-							<p>Cariri Rifas</p>
 						</div>
 
 						<nav>
@@ -66,8 +60,8 @@ const Header: React.FC = () => {
 					          COMO PAGAR
 					        </Link>
 
-					        <Link to="/filantropia-premiada" className="hvr-underline-from-center">
-					          FILANTROPIA
+					        <Link to="/empresa" className="hvr-underline-from-center">
+					          EMPRESA
 					        </Link>
 
 					        <Link to="/contatos" className="hvr-underline-from-center" id="lastLink">

@@ -92,6 +92,9 @@ export const Container = styled.div`
 
 	div.sorteiosContainer{
 
+		
+		
+
 		p.main{
 			font-weight: 500;
 			font-size: 30px;
@@ -120,12 +123,13 @@ export const Container = styled.div`
 		div.sorteios{
 			
 			display: flex;
-			margin-bottom: 54px;
+			
 
 
 			div.model{
 				
 				margin-left: 50px;
+				margin-bottom: 54px;
 				transition: all 0.2s;
 
 				& + div.model{
@@ -182,6 +186,107 @@ export const Container = styled.div`
 					margin-bottom: 8px;
 				}
 			}	
+		}
+	}
+
+	div.etapas{
+			width: 100%;
+			height: 400px;		
+			background: #121212;
+
+			div.title{
+				height: 70px;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+
+				p.main{
+						margin-top: 25px;
+						font-weight: 500;
+						font-size: 30px;
+						
+						color: #fff;
+						text-align: center;
+				}		
+			}		
+
+			div.divisor{
+						
+				width: 100%;
+				display: flex;
+				justify-content: center;
+						
+				button{
+					border: 0px;
+					padding: 1px 80px;
+					cursor: default;
+					margin-top: 10px;
+					margin-bottom: 45px;
+				}
+			}
+				
+			
+			div.explainBox{
+				display: flex;
+				justify-content: center;
+
+				div.explain{
+
+					& + div.explain{
+						margin-left: 54px;
+					}
+
+					div.explainTitle{
+
+						display: flex;
+						align-items: center;	
+					}
+				}
+
+				div.explainDescription{
+					margin-top: 16px;
+					width: 220px;
+					
+
+					a{
+						color: #d1d1d1;
+						font-weight: 500;
+					}
+
+				}
+			}
+		}	
+	}
+
+	div.filantropiaContainer{
+		width: 100%;
+		
+
+		p.main{
+			font-weight: 500;
+			font-size: 30px;
+			
+			margin-top: 25px;
+			margin-bottom: 10px;
+			color: #fff;
+			text-align: center;
+		}
+
+		div.divisor{
+			
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			
+			button{
+				border: 0px;
+				
+				padding: 1px 60px;
+				cursor: default;
+				margin-bottom: 50px;
+			}
 		}
 	}
 `

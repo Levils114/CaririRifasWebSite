@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	div.contatos{
-		width: auto;
-		height: 490px;
+		width: 100%;
+		height: 300px;
 
 		div.enunciado{
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-top: 70px;
+			margin-top: 120px;
 		}
 
 		div.description{
@@ -74,45 +74,5 @@ export const Container = styled.div`
 			}	
 		}
 
-		div.etapas{
-			display: flex;
-			justify-content: center;
-			width: auto;
-			height: 300px;
-
-			
-			background: #121212;
-			
-
-			div.explain{
-
-				margin-top: 24px;
-
-
-				& + div.explain{
-					margin-left: 54px;
-				}
-
-				div.explainTitle{
-
-					display: flex;
-					align-items: center;
-				
-					
-				}
-			}
-
-			div.explainDescription{
-				margin-top: 16px;
-				width: 210px;
-				
-
-				a{
-					color: #d1d1d1;
-					font-weight: 500;
-				}
-
-			}
-		}
-	}
+		
 `;
