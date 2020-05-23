@@ -68,7 +68,7 @@ const Menu = () => {
 		              <span>LAND ROVER</span>
 		              <p className="ano">2017</p>
 		              <button>
-		              	<Link to="/teste">EM BREVE</Link>
+		              	<Link to="/sorteio/range-rover">EM BREVE</Link>
 		              </button>
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um carro</p>		
 		              <img src={img3} alt="slideImg3"/>
@@ -92,7 +92,7 @@ const Menu = () => {
 				     	<p className="modelo">Range Rover</p>
 				     	<p className="data">Sorteio dia 11/05/2020</p>
 				     	<Button typeOfButton="emBreve">
-				     		<Link>Em Breve ✔</Link>
+				     		<Link to="/sorteio/range-rover">Em Breve ✔</Link>
 				     	</Button>
 			     	</div>
 

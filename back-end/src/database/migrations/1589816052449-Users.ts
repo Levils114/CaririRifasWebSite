@@ -26,11 +26,6 @@ export default class Users1589816052449 implements MigrationInterface {
     					isNullable: false,
     				},
     				{
-    					name: "email",
-    					type: "varchar",
-    					isNullable: false,
-    				},
-    				{
     					name: "phone",
     					type: "varchar",
     					isNullable: false,
@@ -40,6 +35,11 @@ export default class Users1589816052449 implements MigrationInterface {
     					type: "varchar",
     					isNullable: false,
     				},
+                    {
+                        name: "estado",
+                        type: "varchar",
+                        isNullable: false,
+                    },
     				{
     					name: "created_at",
     					type: "timestamp",

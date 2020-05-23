@@ -262,6 +262,7 @@ export const Container = styled.div`
 
 	div.filantropiaContainer{
 		width: 100%;
+		height: 350px;
 		
 
 		p.main{

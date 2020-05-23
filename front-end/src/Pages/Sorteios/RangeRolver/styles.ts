@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+
+interface ButtonProps{
+	estado?: string;
+}
 
 export const Container = styled.div`
 
@@ -50,24 +54,34 @@ export const Container = styled.div`
 		margin-right: 130px;
 		margin-bottom: 30px;
 
-		button{
-			border: 0px;
-			background: transparent;
-			padding: 5.5px 1px;
-			
-
-			a{
-				padding: 5px 10px;
-				
-				text-decoration: none;
-				color: #fff;
-				font-weight: 500;
-				border-radius: 20px;
-				background: #CCAD1E;
-			}
-
-			
-		}
 	}
 
 `;
+
+export const Button = styled.button<ButtonProps>`
+
+	border: 0px;
+	background: transparent;
+	padding: 5.5px 1px;
+			
+
+	a{
+		padding: 5px 10px;
+				
+		text-decoration: none;
+		color: #fff;
+		font-weight: 500;
+		border-radius: 20px;
+		background: #CCAD1E;
+	}
+
+	${props => props.estado === "reservado" && css`
+		a{background: #444444;}
+	`}
+
+	${props => props.estado === "pago" && css`
+		a{background: green;}
+	`}
+
+
+`

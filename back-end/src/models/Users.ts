@@ -13,13 +13,13 @@ class User{
 	sorteio: string;
 
 	@Column('varchar')
-	email: string;
-
-	@Column('varchar')
 	phone: number;
 
 	@Column('varchar')
 	rifa: number;
+
+	@Column('varchar')
+	estado: string;
 
 	@CreateDateColumn()
 	created_at: Date;

@@ -7,7 +7,9 @@ import Sorteios from './../Pages/Sorteios/Dashboard/index';
 import ComoPagar from './../Pages/Como-Pagar/';
 import Contatos from './../Pages/Contatos/';
 import CruzerLTTurbo from './../Pages/Sorteios/CruzerLTTurbo/index';
+import RangeRover from './../Pages/Sorteios/RangeRolver/index';
 import CadastroCruzerLTTurbo from './../Pages/Sorteios/CruzerLTTurbo/Cadastro/';
+import CadastroRangeRover from './../Pages/Sorteios/RangeRolver/Cadastro/';
 
 const Routes: React.FC = () => {
 	return (
@@ -17,7 +19,9 @@ const Routes: React.FC = () => {
 			<Route path="/como-pagar" component={ComoPagar} />
 			<Route path="/contatos" component={Contatos} />
 			<Route path="/sorteio/cruzer-lt-turbo" component={CruzerLTTurbo} />
+			<Route path="/sorteio/range-rover" component={RangeRover} />
 			<Route path="/cruzer-lt-turbo/cadastro/:number" component={CadastroCruzerLTTurbo} />
+			<Route path="/range-rover/cadastro/:number" component={CadastroRangeRover} />
 		</Switch>
 		);
 }

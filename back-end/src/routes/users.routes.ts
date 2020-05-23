@@ -14,7 +14,7 @@ userRouter.post('/', async (request: Request, response: Response) => {
 
 		const createUser = new CreateUserService();
 
-		const user = await createUser.execute({ name, sorteio, email, phone, rifa });
+		const user = await createUser.execute({ name, sorteio, phone, rifa, estado: "reservado" });
 
 		return response.json(user);
 	} catch(err){

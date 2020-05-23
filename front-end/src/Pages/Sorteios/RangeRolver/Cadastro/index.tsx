@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 
 import api from './../../../../Service/api';
 
@@ -14,7 +14,7 @@ import Footer from './../../../../Components/Footer/';
 import Input from './../../../../Components/Input/';
 
 
-import {FiArrowLeft} from 'react-icons/fi';
+import {FiArrowLeft, FiAtSign} from 'react-icons/fi';
 import {IoMdPerson} from 'react-icons/io';
 import {FaPhoneAlt} from 'react-icons/fa';
 import {AiOutlineFieldNumber} from 'react-icons/ai';
@@ -32,14 +32,14 @@ interface User{
 	sorteio: string;
 }
 
-const CadastroCruzerLTTurbo: React.FC = () => {
+const CadastroRangeRover: React.FC = () => {
 
 	const {params} = useRouteMatch<NumberParams>();
 
 	const formRef = useRef<FormHandles>(null);
 
 	const [name, setName] = useState('');
-	const sorteio = 'Cruzer LT Turbo';
+	const sorteio = 'Range Rover';
 	const [phone, setPhone] = useState('');
 	const rifa = params.number;
 	const [rifaUsed, setRifaUsed] = useState<User[]>([]);
@@ -90,14 +90,11 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 	function handdleDeleteData(){
 		setName('');
 		setPhone('');
-
 	}
 
 	useEffect(() => {
 		api.get('/users').then(response => {setRifaUsed(response.data)});		
 	}, []);
-
-	console.log(rifaIndex);
 
 
 	return(
@@ -107,7 +104,7 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 					
 						<div className="form">
 							<div className="voltar">
-								<Link to="/sorteio/cruzer-lt-turbo">
+								<Link to="/sorteio/range-rover">
 									<FiArrowLeft size={20}/>
 									<p>Voltar</p>
 								</Link>	
@@ -120,7 +117,7 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 
 								<p>Telefone:</p>
 								<Input icon={FaPhoneAlt} value={phone} onChange={e => setPhone(e.target.value)} name="phone" type="tel" placeholder="Escreva seu número"/>
-							
+
 								<p>Rifa:</p>
 								<Input icon={AiOutlineFieldNumber} readOnly placeholder={`${params.number}`} name="rifa"/>
 
@@ -140,4 +137,4 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 		);
 }
 
-export default CadastroCruzerLTTurbo;
+export default CadastroRangeRover;

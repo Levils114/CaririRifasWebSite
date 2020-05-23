@@ -37,7 +37,7 @@ export const FooterPrimary = styled.div`
 
 
 		    a{
-		    	color: #d1d1d1;
+		    	color: #CCAD1E;
 		    	
 
 		    	& + a{

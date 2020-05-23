@@ -29,11 +29,10 @@ export const FirstHeader = styled.div`
 
 		a{
 			text-decoration: none;
-			color: #d1d1d1;
+			color: #CCAD1E;
 			display: flex;
 			align-items: center;
 			position: relative;
-			
 
 			p{
 				color: #d1d1d1;
@@ -102,21 +101,42 @@ export const HeaderPrimary = styled.div`
 
 	    nav {
 	    	margin-top: -10px;
-	      a {
-	        color: #fff;
-	        text-decoration: none;
-	        font-size: 16px;
-	        font-weight: 500;
-	        transition: all 0.2s;
-	        margin-top: 15px;
-	        & + a {
-	          margin-left: 32px;
-	        }
-	        &:hover {
-	          opacity: 0.6;
-	          transform: scale(1.3);
-	        }
-	      }
+
+		      a {
+		        color: #fff;
+		        text-decoration: none;
+		        font-size: 16px;
+		        font-weight: 500;
+		        transition: all 0.2s;
+		        margin-top: 15px;
+		        display: flex;
+		        align-items: center;
+		        border: 2px solid #CCAD1E;
+		        height: 42px;
+
+		        & + a {
+		          margin-left: 26px;
+		        }
+		        &:hover {
+		          opacity: 0.6;
+		          transform: scale(1.3);
+		        }
+
+		        svg{
+						color: #CCAD1E;
+						margin-right: 6px;
+					}
+
+		        p{
+		        	display: flex;
+		        	align-items: center;
+
+			        svg{
+						color: #CCAD1E;
+						margin-right: 4px;
+					}
+				}	
+		      }
 
 	      a#lastLink{
 	      	margin-right: 60px;
