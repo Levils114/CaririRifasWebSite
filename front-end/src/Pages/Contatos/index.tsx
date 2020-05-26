@@ -15,7 +15,7 @@ const Contatos: React.FC = () => {
 				<Header />
 					<div className="contatos">
 						<div className="enunciado">
-							<h2>Entre em contato conosco para tirar suas dúvidas </h2>
+							<h2>Entre em contato conosco para tirar suas dúvidas</h2>
 							<FaSmileWink size={20} />
 						</div>	
 

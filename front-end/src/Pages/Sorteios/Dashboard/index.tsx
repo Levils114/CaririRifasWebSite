@@ -53,104 +53,107 @@ const Sorteios: React.FC = () => {
 		<Container>
 			<Header />
 
-			<Filtros>
-					<div className="filtros">
-						<Button className="firstButton" onClick={handdleTodos}>Todos</Button>
-						<Button onClick={handdleAbertos}>Abertos</Button>
-						<Button onClick={handdleEmBreve}>Em Breve</Button>
-						<Button className="lastButton" onClick={handdleEncerrado}>Encerrado</Button>
-					</div>	
+			<div className="background">
+				<Filtros>
+						<div className="filtros">
+							<Button className="firstButton" onClick={handdleTodos}>Todos</Button>
+							<Button onClick={handdleAbertos}>Abertos</Button>
+							<Button onClick={handdleEmBreve}>Em Breve</Button>
+							<Button className="lastButton" onClick={handdleEncerrado}>Encerrado</Button>
+						</div>	
 
-					{todos===true && (
+						{todos===true && (
+								<SorteiosPage>
+									<div className="sorteios">
+
+										<div className="model" id="aberto">
+								     		<p className="emBreve">Em Breve</p>
+									     	<img src={img6} alt="sorteioImg2"/>
+									     	<p className="modelo">Range Rover</p>
+									     	<p className="data">Sorteio dia 11/05/2020</p>
+									     	<Button typeOfButton="emBreve">
+									     		<Link to="/sorteio/range-rover">Em Breve ✔</Link>
+									     	</Button>
+								     	</div>
+
+										<div className="model" id="emBreve">
+									     	<p className="comprar">Comprar</p>
+										     <img src={img4} alt="sorteioImg1"/>
+										     <p className="modelo">Cruzer LT Turbo</p>
+										     <p className="data">Sorteio dia 11/05/2020</p>
+										     <Button typeOfButton="comprar">
+										     	<Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
+										     </Button>
+									     </div>
+
+									     <div className="model" id="encerrado">
+								     		<p className="esgotado">Esgotado</p>
+									     	<img src={img5} alt="sorteioImg2"/>
+									     	<p className="modelo">Lander 255cc</p>
+									     	<p className="data">Sorteio dia 11/05/2020</p>
+									     	<Button typeOfButton="terminado">
+									     		<Link to="teste">Ver Resultado ✔</Link>
+									     	</Button>
+								     	</div>
+
+									</div> 
+			    
+								</SorteiosPage>
+							)}
+
+						{abertos===true && (
 							<SorteiosPage>
 								<div className="sorteios">
-
-									<div className="model" id="aberto">
-							     		<p className="emBreve">Em Breve</p>
-								     	<img src={img6} alt="sorteioImg2"/>
-								     	<p className="modelo">Range Rover</p>
-								     	<p className="data">Sorteio dia 11/05/2020</p>
-								     	<Button typeOfButton="emBreve">
-								     		<Link to="teste">Em Breve ✔</Link>
-								     	</Button>
-							     	</div>
-
 									<div className="model" id="emBreve">
-								     	<p className="comprar">Comprar</p>
-									     <img src={img4} alt="sorteioImg1"/>
-									     <p className="modelo">Cruzer LT Turbo</p>
-									     <p className="data">Sorteio dia 11/05/2020</p>
-									     <Button typeOfButton="comprar">
-									     	<Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
-									     </Button>
-								     </div>
-
-								     <div className="model" id="encerrado">
-							     		<p className="esgotado">Esgotado</p>
-								     	<img src={img5} alt="sorteioImg2"/>
-								     	<p className="modelo">Lander 255cc</p>
-								     	<p className="data">Sorteio dia 11/05/2020</p>
-								     	<Button typeOfButton="terminado">
-								     		<Link to="teste">Ver Resultado ✔</Link>
-								     	</Button>
-							     	</div>
-
-								</div> 
-		    
+									     <p className="comprar">Comprar</p>
+										 <img src={img4} alt="sorteioImg1"/>
+										 <p className="modelo">Cruzer LT Turbo</p>
+										 <p className="data">Sorteio dia 11/05/2020</p>
+										 <Button typeOfButton="comprar">
+										    <Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
+										 </Button>
+									</div>
+							     </div>	
 							</SorteiosPage>
-						)}
+							)}
 
-					{abertos===true && (
-						<SorteiosPage>
-							<div className="sorteios">
-								<div className="model" id="emBreve">
-								     <p className="comprar">Comprar</p>
-									 <img src={img4} alt="sorteioImg1"/>
-									 <p className="modelo">Cruzer LT Turbo</p>
-									 <p className="data">Sorteio dia 11/05/2020</p>
-									 <Button typeOfButton="comprar">
-									    <Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
-									 </Button>
-								</div>
-						     </div>	
-						</SorteiosPage>
-						)}
+						{emBreve===true && (
+							<SorteiosPage>
+								<div className="sorteios">
+									<div className="model" id="aberto">
+								     		<p className="emBreve">Em Breve</p>
+									     	<img src={img6} alt="sorteioImg2"/>
+									     	<p className="modelo">Range Rover</p>
+									     	<p className="data">Sorteio dia 11/05/2020</p>
+									     	<Button typeOfButton="emBreve">
+									     		<Link to="/sorteio/range-rover">Em Breve ✔</Link>
 
-					{emBreve===true && (
-						<SorteiosPage>
-							<div className="sorteios">
-								<div className="model" id="aberto">
-							     		<p className="emBreve">Em Breve</p>
-								     	<img src={img6} alt="sorteioImg2"/>
-								     	<p className="modelo">Range Rover</p>
-								     	<p className="data">Sorteio dia 11/05/2020</p>
-								     	<Button typeOfButton="emBreve">
-								     		<Link to="teste">Em Breve ✔</Link>
-								     	</Button>
-							     	</div>
-						     </div>	
-						</SorteiosPage>
-						)}
+									     	</Button>
+								     	</div>
+							     </div>	
+							</SorteiosPage>
+							)}
 
-					{encerrado===true && (
-						<SorteiosPage>
-							<div className="sorteios">
-							 <div className="model" id="encerrado">
-							     	<p className="esgotado">Esgotado</p>
-								     <img src={img5} alt="sorteioImg2"/>
-								     <p className="modelo">Lander 255cc</p>
-								     <p className="data">Sorteio dia 11/05/2020</p>
-								     <Button typeOfButton="terminado">
-								     	<Link to="teste">Ver Resultado ✔</Link>
-								     </Button>
-							 </div>
-							</div> 
-						</SorteiosPage>
-						)}
+						{encerrado===true && (
+							<SorteiosPage>
+								<div className="sorteios">
+								 <div className="model" id="encerrado">
+								     	<p className="esgotado">Esgotado</p>
+									     <img src={img5} alt="sorteioImg2"/>
+									     <p className="modelo">Lander 255cc</p>
+									     <p className="data">Sorteio dia 11/05/2020</p>
+									     <Button typeOfButton="terminado">
+									     	<Link to="teste">Ver Resultado ✔</Link>
+									     </Button>
+								 </div>
+								</div> 
+							</SorteiosPage>
+							)}
 
-					
-			</Filtros>
+						
+				</Filtros>
 
+			</div>
 			
 
 			<Footer />

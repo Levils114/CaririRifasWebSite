@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
+import backgroundImg from './../../../../Assets/Background/background2.png';
+
+
 export const Container = styled.div`
 	
+	background: #262626 url(${backgroundImg}) 100% 50% no-repeat;
 
 	div.formContainer{
 		display: flex;
@@ -11,7 +15,7 @@ export const Container = styled.div`
 
 		div.form{
 			width: 900px;
-			background: #121212;
+			background: rgba(18, 18, 18, 0.5);
 			border-radius: 20px;
 
 			div.voltar{

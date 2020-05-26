@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
+import backgroundImg from './../../Assets/Background/background2.png';
+
 export const Container = styled.div`
+
+	background: #262626 url(${backgroundImg}) 0% 80% no-repeat;
 
 	div.title{
 		display: flex;

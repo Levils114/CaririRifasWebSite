@@ -8,6 +8,7 @@ import {Link} from 'react-router-dom';
 
 import Header from './../../../Components/Header/';
 import Footer from './../../../Components/Footer/';
+import ButtonOfRifas from './../../../Components/ButtonOfRifas';
 
 import {Slide} from 'react-slideshow-image';
 
@@ -87,7 +88,8 @@ const RangeRover = () => {
 
 				<div className="rifas">
 					{numbersOfRifas.map(number => (
-						<Button estado=""><Link to={`/range-rover/cadastro/${number}`}>{number}</Link></Button>
+						<Button estado="reservado"><Link to={`/range-rover/cadastro/${number}`}>{number}</Link></Button>
+
 						))}
 				</div>
 			<Footer />

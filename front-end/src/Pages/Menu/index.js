@@ -77,120 +77,122 @@ const Menu = () => {
 		        </Slide>
 		     </div>
 
-		     <div className="sorteiosContainer">
-		     	<p className="main">SORTEIOS</p>
+		     <div className="divToBackground">
 
-		     	<div className="divisor">
-		     		<button></button>
-		     	</div>
+			     <div className="sorteiosContainer">
+			     	<p className="main">SORTEIOS</p>
 
-		     	
-			     <div className="sorteios">
-			     	<div className="model">
-			     		<p className="emBreve">Em Breve</p>
-				     	<img src={img6} alt="sorteioImg2"/>
-				     	<p className="modelo">Range Rover</p>
-				     	<p className="data">Sorteio dia 11/05/2020</p>
-				     	<Button typeOfButton="emBreve">
-				     		<Link to="/sorteio/range-rover">Em Breve ✔</Link>
-				     	</Button>
+			     	<div className="divisor">
+			     		<button></button>
 			     	</div>
 
-			     	<div className="model">
-			     		<p className="comprar">Comprar</p>
-				     	<img src={img4} alt="sorteioImg1"/>
-				     	<p className="modelo">Cruzer LT Turbo</p>
-				     	<p className="data">Sorteio dia 11/05/2020</p>
-				     	<Button typeOfButton="comprar">
-				     		<Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
-				     	</Button>
-			     	</div>
+			     	
+				     <div className="sorteios">
+				     	<div className="model">
+				     		<p className="emBreve">Em Breve</p>
+					     	<img src={img6} alt="sorteioImg2"/>
+					     	<p className="modelo">Range Rover</p>
+					     	<p className="data">Sorteio dia 11/05/2020</p>
+					     	<Button typeOfButton="emBreve">
+					     		<Link to="/sorteio/range-rover">Em Breve ✔</Link>
+					     	</Button>
+				     	</div>
 
-			     	<div className="model">
-			     		<p className="esgotado">Esgotado</p>
-				     	<img src={img5} alt="sorteioImg2"/>
-				     	<p className="modelo">Lander 255cc</p>
-				     	<p className="data">Sorteio dia 11/05/2020</p>
-				     	<Button typeOfButton="terminado">
-				     		<Link>Ver Resultado ✔</Link>
-				     	</Button>
-			     	</div>
+				     	<div className="model">
+				     		<p className="comprar">Comprar</p>
+					     	<img src={img4} alt="sorteioImg1"/>
+					     	<p className="modelo">Cruzer LT Turbo</p>
+					     	<p className="data">Sorteio dia 11/05/2020</p>
+					     	<Button typeOfButton="comprar">
+					     		<Link to="/sorteio/cruzer-lt-turbo">Comprar ✔</Link>
+					     	</Button>
+				     	</div>
+
+				     	<div className="model">
+				     		<p className="esgotado">Esgotado</p>
+					     	<img src={img5} alt="sorteioImg2"/>
+					     	<p className="modelo">Lander 255cc</p>
+					     	<p className="data">Sorteio dia 11/05/2020</p>
+					     	<Button typeOfButton="terminado">
+					     		<Link>Ver Resultado ✔</Link>
+					     	</Button>
+				     	</div>
+				     </div>
 			     </div>
-		     </div>
 
-		     <div className="etapas">
-		     				
-		     				<div className="title">
-				     			<p className="main">COMO PARTICIPAR</p>
-				     		</div>
-				     		
-							<div className="divisor">
-							    <button></button>
+			     <div className="etapas">
+			     				
+			     				<div className="title">
+					     			<p className="main">COMO PARTICIPAR</p>
+					     		</div>
+					     		
+								<div className="divisor">
+								    <button></button>
+								</div>
+								    
+							     
+
+
+							    <div className="explainBox">	
+									<div className="explain">
+										<div className="explainTitle">
+											<BsSearch size={22}/>
+											<h3>Escolha o Sorteio</h3>
+										</div>	
+
+										<div className="explainDescription">
+											<p>O primeiro passo para participar de nossas rifas, é escolher o sorteio que você quer participar. Você pode fazer isso acessando a aba <Link to="/sorteios">Sorteios</Link>.</p>
+										</div>
+									</div>
+
+									<div className="explain">
+										<div className="explainTitle">
+											<FiCheckSquare size={22}/>
+											<h3>Escolha Seus Números</h3>
+										</div>	
+
+										<div className="explainDescription">	
+											<p>Após escolher o sorteio que você participará, escolha os números que você quiser. Você pode escolher quantos números desejar. Quanto mais números escolher, mais chances de ganhar.</p>
+										</div>	
+									</div>
+
+									<div className="explain">
+										<div className="explainTitle">
+											<MdPayment size={22}/>
+											<h3>Efetue o Pagamento</h3>
+										</div>
+										
+										<div className="explainDescription">	
+											<p>Após escolher seus números, efetue o pagamento a partir dos nossos meios de pagamento, que você pode encontrar na aba <Link to="/como-pagar">Como Pagar</Link>, e nos envie o comprovante via <a href="https://api.whatsapp.com/send?phone=+5588998139342">Whatsapp</a>.</p>
+										</div>
+									</div>
+
+									<div className="explain">
+										<div className="explainTitle">
+											<BsClock size={22}/>
+											<h3>Aguarde Dia do Sorteio</h3>
+										</div>	
+
+										<div className="explainDescription">
+											<p>Após seu pagamento ser confirmado por nós, aguarde o dia do sorteio e venha conferir o resultado no site.</p>
+										</div>
+									</div>
+								</div>	
 							</div>
-							    
-						     
 
+			     <div className="filantropiaContainer">
+			     	<p className="main">FILANTROPIA</p>
 
-						    <div className="explainBox">	
-								<div className="explain">
-									<div className="explainTitle">
-										<BsSearch size={22}/>
-										<h3>Escolha o Sorteio</h3>
-									</div>	
+			     	<div className="divisor">
+			     		<button></button>
+			     	</div>
 
-									<div className="explainDescription">
-										<p>O primeiro passo para participar de nossas rifas, é escolher o sorteio que você quer participar. Você pode fazer isso acessando a aba <Link to="/sorteios">Sorteios</Link>.</p>
-									</div>
-								</div>
+			     	
+				     <div className="filantropia">
 
-								<div className="explain">
-									<div className="explainTitle">
-										<FiCheckSquare size={22}/>
-										<h3>Escolha Seus Números</h3>
-									</div>	
-
-									<div className="explainDescription">	
-										<p>Após escolher o sorteio que você participará, escolha os números que você quiser. Você pode escolher quantos números desejar. Quanto mais números escolher, mais chances de ganhar.</p>
-									</div>	
-								</div>
-
-								<div className="explain">
-									<div className="explainTitle">
-										<MdPayment size={22}/>
-										<h3>Efetue o Pagamento</h3>
-									</div>
-									
-									<div className="explainDescription">	
-										<p>Após escolher seus números, efetue o pagamento a partir dos nossos meios de pagamento, que você pode encontrar na aba <Link to="/como-pagar">Como Pagar</Link>, e nos envie o comprovante via <a href="https://api.whatsapp.com/send?phone=+5588998139342">Whatsapp</a>.</p>
-									</div>
-								</div>
-
-								<div className="explain">
-									<div className="explainTitle">
-										<BsClock size={22}/>
-										<h3>Aguarde Dia do Sorteio</h3>
-									</div>	
-
-									<div className="explainDescription">
-										<p>Após seu pagamento ser confirmado por nós, aguarde o dia do sorteio e venha conferir o resultado no site.</p>
-									</div>
-								</div>
-							</div>	
-						</div>
-
-		     <div className="filantropiaContainer">
-		     	<p className="main">FILANTROPIA</p>
-
-		     	<div className="divisor">
-		     		<button></button>
-		     	</div>
-
-		     	
-			     <div className="filantropia">
-
+				     </div>
 			     </div>
-		     </div>
-
+			</div>
 
 
 		     <div className="footer">

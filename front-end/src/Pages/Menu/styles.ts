@@ -1,11 +1,14 @@
 import styled, {css} from 'styled-components';
 
+import backgroundImg from './../../Assets/Background/background2.png';
 
 interface ButtonProps{
 	typeOfButton?: string;
 }
 
 export const Container = styled.div`
+
+	
 
 	div.footer{
 		display: flex;
@@ -85,21 +88,23 @@ export const Container = styled.div`
 	div.slide-container {
 	  width: 100%;
 	  height: 100%;
-	  margin: auto; 
+	  margin: auto;
+	}
 
-
+	div.divToBackground{
+		
 	}
 
 	div.sorteiosContainer{
 
-		
+		background: #262626 url(${backgroundImg}) 0% 30% no-repeat ;
 		
 
 		p.main{
 			font-weight: 500;
 			font-size: 30px;
 			
-			margin-top: 25px;
+			
 			margin-bottom: 10px;
 			color: #fff;
 			text-align: center;
@@ -124,7 +129,7 @@ export const Container = styled.div`
 			
 			display: flex;
 			
-
+			
 
 			div.model{
 				
@@ -264,12 +269,13 @@ export const Container = styled.div`
 		width: 100%;
 		height: 350px;
 		
+		background: #262626 url(${backgroundImg}) 0% 20% no-repeat;
 
 		p.main{
 			font-weight: 500;
 			font-size: 30px;
 			
-			margin-top: 25px;
+			
 			margin-bottom: 10px;
 			color: #fff;
 			text-align: center;

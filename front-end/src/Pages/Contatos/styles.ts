@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
+import backgroundImg from './../../Assets/Background/background2.png';
+
 export const Container = styled.div`
+
+	background: #262626 url(${backgroundImg}) 0% 90% no-repeat;
+
 	div.contatos{
 		width: 100%;
-		height: 300px;
+		height: 400px;
 
 		div.enunciado{
 			display: flex;

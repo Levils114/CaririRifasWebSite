@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import backgroundImg from './../../../Assets/Background/background2.png';
+
 interface ButtonProps{
 	typeOfButton?: string;
 	itsOn?: boolean;
@@ -7,11 +9,16 @@ interface ButtonProps{
 
 
 export const Container = styled.div`
+	
+	
+	  background: #262626 url(${backgroundImg}) 0% 80% no-repeat;
+	
 
 `;
 
 export const Filtros = styled.div`
 
+	
 	height: 540px;
 
 	div.filtros{
@@ -19,7 +26,7 @@ export const Filtros = styled.div`
 		margin-top: 44px;
 
 		button{
-			background: transparent;
+			background: #121212;
 			color: #d1d1d1;
 			padding: 5px 10px;
 			border: 1px solid #d1d1d1;

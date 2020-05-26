@@ -10,8 +10,7 @@ import {BsBuilding} from 'react-icons/bs';
 import {FiPhone} from 'react-icons/fi';
 import {RiTrophyLine} from 'react-icons/ri';
 
-
-import logoImg from './../../Assets/Menu/logo2.png'
+import logoImg from './../../Assets/Menu/logo3.png'
 
 const Header: React.FC = () => {
 	return (

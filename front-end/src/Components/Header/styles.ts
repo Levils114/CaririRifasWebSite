@@ -69,9 +69,7 @@ export const FirstHeader = styled.div`
 
 export const HeaderPrimary = styled.div`
 	background-color: #0d0d0d;
-	height: 130px;
-	
-
+	height: 150px;
 
 	header {
 	    width: 100%;
@@ -92,8 +90,8 @@ export const HeaderPrimary = styled.div`
 		    }
 
 		    img{
-		    	height: 140px;
-		    	width: 210px;
+		    	height: 160px;
+		    	width: 290px;
 		    	margin-left: 100px;
 		    	
 		    }
