@@ -64,9 +64,27 @@ const CruzerLTTurbo = () => {
 					<button></button>
 				</div>
 
+				<div className="alert">
+					<span>ALERTA: OS SORTEIOS SÃO PROIBIDOS PARA MENORES DE 18 ANOS</span>
+				</div>
+
+				<div className="stylesOfButtons">
+					<button className="aberto">Aberto</button>
+					<button className="reservado">Reservado</button>
+					<button className="pago">Pago</button>
+				</div>
+
 				<div className="rifas">
 					{numbersOfRifas.map(number => (
-						<button><Link to={`/cruzer-lt-turbo/cadastro/${number}`}>{number}</Link></button>
+						<>
+							<div className="divToTooltip">
+								<button>
+									<Link to={`/cruzer-lt-turbo/cadastro/${number}`}>{number}</Link>
+								</button>
+
+								<span className="tooltipText">O número {number} está reservado por Levi</span>
+							</div>	
+						</>
 						))}
 				</div>
 			<Footer />

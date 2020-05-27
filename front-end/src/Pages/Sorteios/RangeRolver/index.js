@@ -8,7 +8,8 @@ import {Link} from 'react-router-dom';
 
 import Header from './../../../Components/Header/';
 import Footer from './../../../Components/Footer/';
-import ButtonOfRifas from './../../../Components/ButtonOfRifas';
+import ButtonOfRifas from './../../../Components/ButtonOfRifas/';
+import Tooltip from './../../../Components/Tooltip/';
 
 import {Slide} from 'react-slideshow-image';
 
@@ -18,6 +19,7 @@ import img3 from './../../../Assets/Sorteios/RangeRover/3.jpg';
 import img4 from './../../../Assets/Sorteios/RangeRover/4.jpg';
 import img5 from './../../../Assets/Sorteios/RangeRover/5.jpg';
 import img6 from './../../../Assets/Sorteios/RangeRover/6.jpg';
+
 
 const RangeRover = () => {
 
@@ -37,16 +39,12 @@ const RangeRover = () => {
 	const [users, setUsers] = useState([]);
 	const estados = users.map(user => user.estado);
 	const rifas = users.map(user => user.rifa);
+	const [state, setState] = useState('');
 
 
 	useEffect(() => {
 		api.get('/users').then(response => {setUsers(response.data)});
-
-
 	}, []);
-
-	console.log(estados);
-	console.log(rifas);
 
 	
 
@@ -86,9 +84,27 @@ const RangeRover = () => {
 					<button></button>
 				</div>
 
+				<div className="alert">
+					<span>ALERTA: OS SORTEIOS SÃO PROIBIDOS PARA MENORES DE 18 ANOS</span>
+				</div>
+
+				<div className="stylesOfButtons">
+					<button className="aberto">Aberto</button>
+					<button className="reservado">Reservado</button>
+					<button className="pago">Pago</button>
+				</div>
+
 				<div className="rifas">
 					{numbersOfRifas.map(number => (
-						<Button estado="reservado"><Link to={`/range-rover/cadastro/${number}`}>{number}</Link></Button>
+						<>
+							<div className="divToTooltip">
+								<Button estado={state}>
+									<Link to={`/range-rover/cadastro/${number}`}>{number}</Link>
+								</Button>
+
+								<span className="tooltipText">O número {number} está reservado por Levi</span>
+							</div>	
+						</>	
 
 						))}
 				</div>

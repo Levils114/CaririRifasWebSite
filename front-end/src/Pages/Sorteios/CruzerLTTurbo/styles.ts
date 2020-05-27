@@ -49,10 +49,91 @@ export const Container = styled.div`
 		}
 	}
 
+	div.alert{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		
+
+		span{
+			font-weight: 500;
+			border-radius: 20px;
+			background: #FF2929;
+			width: 600px; 
+			color: #FFF
+		}
+	}
+
+	div.stylesOfButtons{
+
+		margin-left: 130px;
+		margin-bottom: 30px;
+		margin-top: 22px;
+
+		button{
+			padding: 5px 10px;
+			cursor: default;
+			color: #FFF;
+			border: 0px;
+			border-radius: 20px;
+			font-weight: 500;
+		}
+
+		button.aberto{
+			background: #CCAD1E;
+		}
+
+		button.reservado{
+			background: #444444;
+		}
+
+		button.pago{
+			background: green;
+		}
+	}
+
 	div.rifas{
 		margin-left: 130px;
 		margin-right: 130px;
 		margin-bottom: 30px;
+
+		div.divToTooltip{
+
+			position: relative;
+			display: inline-block;
+
+			span{
+				visibility: hidden;
+			  	width: 160px;
+			  	background-color: #121212;
+			  	color: #fff;
+			  	text-align: center;
+			  	border-radius: 6px;
+			  	padding: 5px 0;
+			  	bottom: 100%;
+			  	left: 50%;
+			  	margin-left: -85px;
+			  	margin-bottom: 5px;
+
+			  	position: absolute;
+  				z-index: 1;
+
+  				&::before{
+  					content: '';
+					border-style: solid;
+					border-color: #121212 transparent;
+  					border-width: 6px 6px 0 6px;
+  					top: 100%;
+					position: absolute;
+					left: 50%;
+  				}
+			}
+
+			&:hover{
+				span{
+					visibility: visible;
+				}
+			}
 
 		button{
 			border: 0px;
