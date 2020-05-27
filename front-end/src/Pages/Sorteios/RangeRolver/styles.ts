@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 import backgroundImg from './../../../Assets/Background/background2.png';
 
 interface ButtonProps{
-	estado?: string;
+	estado?: string | null;
 }
 
 export const Container = styled.div`
@@ -97,6 +97,53 @@ export const Container = styled.div`
 		}
 	}
 
+	div.rifasAlreadyUsed{
+
+		margin-left: 130px;
+		margin-right: 130px;
+		margin-bottom: 30px;
+
+		div.divToTooltip{
+
+			position: relative;
+			display: inline-block;
+
+			span{
+				visibility: hidden;
+			  	width: 160px;
+			  	background-color: #121212;
+			  	color: #fff;
+			  	text-align: center;
+			  	border-radius: 6px;
+			  	padding: 5px 0;
+			  	bottom: 100%;
+			  	left: 50%;
+			  	margin-left: -88px;
+			  	margin-bottom: 5px;
+
+			  	position: absolute;
+  				z-index: 1;
+
+  				&::before{
+  					content: '';
+					border-style: solid;
+					border-color: #121212 transparent;
+  					border-width: 6px 6px 0 6px;
+  					top: 100%;
+					position: absolute;
+					left: 50%;
+  				}
+			}
+
+			&:hover{
+				span{
+					visibility: visible;
+				}
+			}
+		}
+
+	}
+
 	div.rifas{
 		margin-left: 130px;
 		margin-right: 130px;
@@ -121,7 +168,7 @@ export const Container = styled.div`
 			  	padding: 5px 0;
 			  	bottom: 100%;
 			  	left: 50%;
-			  	margin-left: -85px;
+			  	margin-left: -88px;
 			  	margin-bottom: 5px;
 
 			  	position: absolute;
@@ -151,27 +198,57 @@ export const Container = styled.div`
 
 export const Button = styled.button<ButtonProps>`
 
-	border: 0px;
-	background: transparent;
-	padding: 5.5px 1px;
-			
-
-	a{
-		padding: 5px 10px;
+	${props => props.estado === "" && css`
+		border: 0px;
+		background: transparent;
+		padding: 5.5px 1px;
 				
-		text-decoration: none;
-		color: #fff;
-		font-weight: 500;
-		border-radius: 20px;
-		background: #CCAD1E;
-	}
+
+		a{
+			padding: 5px 10px;
+					
+			text-decoration: none;
+			color: #fff;
+			font-weight: 500;
+			border-radius: 20px;
+			background: #CCAD1E;
+		}
+	`}	
 
 	${props => props.estado === "reservado" && css`
-		a{background: #444444;}
+		border: 0px;
+		background: transparent;
+		padding: 5.5px 1px;
+		cursor: default;
+
+		a{
+			padding: 5px 10px;
+			cursor: default;
+					
+			text-decoration: none;
+			color: #fff;
+			font-weight: 500;
+			border-radius: 20px;
+			background: #444444;
+		}
 	`}
 
 	${props => props.estado === "pago" && css`
-		a{background: green;}
+		border: 0px;
+		background: transparent;
+		padding: 5.5px 1px;
+		cursor: default;
+
+		a{
+			padding: 5px 10px;
+			cursor: default;
+					
+			text-decoration: none;
+			color: #fff;
+			font-weight: 500;
+			border-radius: 20px;
+			background: green;
+		}
 	`}
 
 
