@@ -8,7 +8,7 @@ interface ButtonProps{
 
 export const Container = styled.div`
 
-	background: #262626 url(${backgroundImg}) 100% 8% no-repeat;
+
 
 	max-widht: 700px;
 
@@ -19,13 +19,34 @@ export const Container = styled.div`
 		align-items: center;
 		margin-top: 50px;
 
+		@media(max-width: 600px){
+			flex-direction: column;
+			margin-top: 0px;
+		}
+
+		h3{
+			@media(max-width: 600px){
+				margin-top: 16px;
+			}
+		}
+
 		div.slider{
 			width: 547px;
 			margin-right: 70px;
 
+			@media(max-width: 600px){
+				width: 100%;
+				margin-right: 0px;
+			}
+
 			img{
 				height: 365px;
 				width: 547px;
+
+				@media(max-width: 600px){
+					height: 280px;
+					width: 100%;
+				}
 			}
 		}
 
@@ -35,6 +56,10 @@ export const Container = styled.div`
 				border: 0px;
 				padding: 1px 230px;
 				margin-bottom: 13px;
+
+				@media(max-width: 600px){
+					padding: 1px 115px;
+				}
 			}
 		}
 	}
@@ -50,6 +75,12 @@ export const Container = styled.div`
 			padding: 0.5px 460px;
 			margin-bottom: 13px;
 			opacity: 0.5;
+
+			@media(max-width: 600px){
+				padding: 0.5px;
+				width: 100%;
+				margin-bottom: 4px;
+			}
 		}
 	}
 
@@ -57,14 +88,18 @@ export const Container = styled.div`
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		
 
 		span{
 			font-weight: 500;
 			border-radius: 20px;
 			background: #FF2929;
 			width: 600px; 
-			color: #FFF
+			color: #FFF;
+
+			@media(max-width: 600px){
+				font-size: 12px;
+				width: 100%;
+			}
 		}
 	}
 
@@ -73,6 +108,10 @@ export const Container = styled.div`
 		margin-left: 130px;
 		margin-bottom: 30px;
 		margin-top: 22px;
+
+		@media(max-width: 600px){
+			margin-left: 30px;
+		}
 
 		button{
 			padding: 5px 10px;
@@ -88,7 +127,7 @@ export const Container = styled.div`
 		}
 
 		button.reservado{
-			background: #444444;
+			background: #101010;
 		}
 
 		button.pago{
@@ -100,6 +139,11 @@ export const Container = styled.div`
 		margin-left: 130px;
 		margin-right: 130px;
 		margin-bottom: 30px;
+
+		@media(max-width: 600px){
+			margin-left: 30px;
+			margin-right: 0px;
+		}
 
 		div.divToTooltip{
 
@@ -175,7 +219,7 @@ export const Button = styled.button<ButtonProps>`
 			color: #fff;
 			font-weight: 500;
 			border-radius: 20px;
-			background: #444444;
+			background: #101010;
 		}
 	`}
 

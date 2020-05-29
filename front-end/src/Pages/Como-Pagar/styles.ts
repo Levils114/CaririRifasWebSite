@@ -4,7 +4,7 @@ import backgroundImg from './../../Assets/Background/background2.png';
 
 export const Container = styled.div`
 
-	background: #262626 url(${backgroundImg}) 0% 80% no-repeat;
+	
 
 	div.title{
 		display: flex;
@@ -16,12 +16,20 @@ export const Container = styled.div`
 
 		h2{
 			margin-left: 9%;
+
+			@media(max-width: 600px){
+				margin-left: 6%;
+			}
 		}
 	}
 
 	div.contasBancarias{
 
 		height: 500px;
+
+		@media(max-width: 600px){
+			height: auto;
+		}
 
 		div.enunciado{
 			display: flex;
@@ -46,6 +54,10 @@ export const Container = styled.div`
 				padding: 1px 480px;
 				border: 0px;
 				cursor: default;
+
+				@media(max-width: 600px){
+					padding: 1px 100px;
+				}
 			}
 		}
 
@@ -56,12 +68,22 @@ export const Container = styled.div`
 			margin-top: 45px;
 			max-width: 70.9%;
 			margin-left: 200px;
+
+			@media(max-width: 600px){
+				margin-left: 100px;
+				flex-direction: column;
+
+			}
 			
 
 			div.dados{
 				max-width: 160px;
 				text-align: center;
 				font-weight: 500;
+
+				@media(max-width: 600px){
+					margin-bottom: 24px;
+				}
 			}
 		}
 	}

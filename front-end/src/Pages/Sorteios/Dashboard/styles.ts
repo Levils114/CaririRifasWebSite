@@ -11,7 +11,7 @@ interface ButtonProps{
 export const Container = styled.div`
 	
 	
-	  background: #262626 url(${backgroundImg}) 0% 80% no-repeat;
+
 	
 
 `;
@@ -21,9 +21,17 @@ export const Filtros = styled.div`
 	
 	height: 540px;
 
+	@media(max-width: 600px){
+		height: auto;
+	}
+
 	div.filtros{
 		margin-left: 79px;
 		margin-top: 44px;
+
+		@media(max-width: 600px){
+			margin-left: 10px;
+		}
 
 		button{
 			background: #121212;
@@ -57,9 +65,17 @@ export const SorteiosPage = styled.div`
 	margin-bottom: 37px;
 	margin-top: 63px;
 
+	@media(max-width: 600px){
+		margin-top: 40px;
+	}
+
 	div.sorteios{
 
 		display: flex;
+
+		@media(max-width: 600px){
+			flex-direction: column;
+		}
 
 
 		& + div.sorteios{
@@ -72,12 +88,22 @@ export const SorteiosPage = styled.div`
 			margin-left: 79px;
 			transition: all 0.2s;
 
+			@media(max-width: 600px){
+				margin-left: 35px;
+				margin-bottom: 40px;
+			}
+
 			&:hover{
 				transform: translateY(-7px);
 			}
 
 			& + div.model{
 				margin-left: 16px;
+
+				@media(max-width: 600px){
+					margin-bottom: 40px; 
+					margin-left: 45px;
+				}
 			}
 
 			img{

@@ -133,10 +133,6 @@ const RangeRover = () => {
 									<Link to={`/range-rover/cadastro/${rifa.number}`}>{rifa.number}</Link>
 								</Button>
 
-								{rifa.user.estado === "" && (
-									<span>A rifa de número {rifa.number} está livre</span>
-									)}
-
 								{rifa.user.estado === "reservado" && (
 									<span>A rifa de número {rifa.number} está reservada por {rifa.user.name}</span>
 									)}

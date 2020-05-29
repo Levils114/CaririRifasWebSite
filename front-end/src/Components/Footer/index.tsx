@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
 					<header>
 						<div>
 							<p>CNPJ: xx.xxx.xxx/xxxx-xx</p>
-							<p>Copyrights © 2020 Todos os direitos reservados.</p>
+							<p>Copyrights © 2020<br />Todos os direitos reservados.</p>
 						</div>
 
 						

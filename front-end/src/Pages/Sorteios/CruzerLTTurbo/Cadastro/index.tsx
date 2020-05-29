@@ -78,7 +78,7 @@ const CadastroCruzerLTTurbo: React.FC = () => {
 			setName('');
 			setPhone('');
 
-			return alert('Seu Cadastro foi bem sucedido. Faça o pagamento e nos envie via Whatsapp o comprovante.');
+			return alert('Seu Cadastro foi bem sucedido. Faça o pagamento em até 24 horas e nos envie o comprovante via Whatsapp.');
 			
 		} catch(err){
 			const errors = getValidationErrors(err);

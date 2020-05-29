@@ -4,11 +4,15 @@ import backgroundImg from './../../Assets/Background/background2.png';
 
 export const Container = styled.div`
 
-	background: #262626 url(${backgroundImg}) 0% 90% no-repeat;
+	
 
 	div.contatos{
 		width: 100%;
 		height: 400px;
+
+		@media(max-width: 600px){
+			height: 500px;
+		}
 
 		div.enunciado{
 			display: flex;
@@ -34,8 +38,14 @@ export const Container = styled.div`
 				display: flex;
 				justify-content: column;
 
+				@media(max-width: 600px){
+					flex-direction: column;
+					text-align: center;
+				}
+
+
 				a{
-					padding: 10px 20px;
+					padding: 10px 25px;
 					text-decoration: none;
 					transition: all 0.2s;
 					display: flex;
@@ -43,9 +53,17 @@ export const Container = styled.div`
 
 					font-size: 17px;
 					font-weight: 500;
+
+					@media(max-width: 600px){
+							margin-bottom: 16px;
+						}
 					
 					& + a{
 						margin-left: 8px;
+
+						@media(max-width: 600px){
+							margin-bottom: 16px;
+						}
 					}
 
 					&:hover{

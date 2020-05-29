@@ -21,7 +21,7 @@ const ComoPagar: React.FC = () => {
 
 			<div className="contasBancarias">
 				<div className="enunciado">
-					<h3>Para participar das rifas, você <b>DEVE</b> fazer uma transferêcia bancária para uma dessa contas abaixo <br /> e nos comprovar via <a href="https://api.whatsapp.com/send?phone=+5588998139342">Whatsapp</a>.</h3>
+					<h3>Para participar das rifas, você <b>DEVE</b> fazer uma transferêcia bancária para uma dessas contas abaixo <br /> e nos comprovar via <a href="https://api.whatsapp.com/send?phone=+5588998139342">Whatsapp</a>.</h3>
 				</div>
 
 				<div className="divisor">

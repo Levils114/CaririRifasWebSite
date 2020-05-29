@@ -20,7 +20,14 @@ export const Container = styled.div`
 		img{
 			width: 100%;
 			height: 530px;
-			transition: all 0.2s;	
+			transition: all 0.2s;
+
+			@media(max-width: 600px){
+				
+				height: 220px;
+				margin-bottom: 16px;
+
+			}	
 		}
 
 
@@ -32,6 +39,12 @@ export const Container = styled.div`
 			margin-left: 180px;
 			margin-top: 220px;
 			font-weight: 500;
+
+			@media(max-width: 600px){
+				font-size: 20px;
+				margin-left: 30px;
+				margin-top: 90px;
+			}
 		} 
 
 		p{
@@ -43,6 +56,12 @@ export const Container = styled.div`
 			margin-top: 190px;
 			font-size: 25px;
 			color: #fff;
+
+			@media(max-width: 600px){
+				font-size: 12.5px;
+				margin-left: 30px;
+				margin-top: 70px;
+			}
 		}
 
 		p.ano{
@@ -50,6 +69,12 @@ export const Container = styled.div`
 			margin-top: 280px;
 			font-size: 25px;
 			color: #fff;
+
+			@media(max-width: 600px){
+				font-size: 12.5px;
+				margin-left: 30px;
+				margin-top: 120px;
+			}
 		}
 
 		
@@ -72,7 +97,14 @@ export const Container = styled.div`
 				color: #fff;
 				text-decoration: none;
 				font-weight: 500;
+
 				
+			}
+
+			@media(max-width: 600px){
+				margin-left: 30px;
+				margin-top: 150px;
+				padding: 10px 0px;
 			}
 		}
 
@@ -91,14 +123,7 @@ export const Container = styled.div`
 	  margin: auto;
 	}
 
-	div.divToBackground{
-		
-	}
-
 	div.sorteiosContainer{
-
-		background: #262626 url(${backgroundImg}) 0% 30% no-repeat ;
-		
 
 		p.main{
 			font-weight: 500;
@@ -108,6 +133,11 @@ export const Container = styled.div`
 			margin-bottom: 10px;
 			color: #fff;
 			text-align: center;
+
+			@media(max-width: 600px){
+				font-size: 25px;
+
+			}
 		}
 
 		div.divisor{
@@ -129,16 +159,27 @@ export const Container = styled.div`
 			
 			display: flex;
 			
+			@media(max-width: 600px){
+				flex-direction: column;
+			}
 			
 
 			div.model{
 				
-				margin-left: 50px;
+				margin-left: 45px;
 				margin-bottom: 54px;
 				transition: all 0.2s;
 
+				@media(max-width: 600px){
+					margin-left: 45px;
+				}
+
 				& + div.model{
 					margin-left: 8px;
+
+					@media(max-width: 600px){
+						margin-left: 45px;
+					}
 				}
 
 				&:hover{
@@ -196,7 +237,7 @@ export const Container = styled.div`
 
 	div.etapas{
 			width: 100%;
-			height: 400px;		
+					
 			background: #121212;
 
 			div.title{
@@ -214,6 +255,10 @@ export const Container = styled.div`
 						
 						color: #fff;
 						text-align: center;
+
+						@media(max-width: 600px){
+							font-size: 25px;
+						}
 				}		
 			}		
 
@@ -228,7 +273,7 @@ export const Container = styled.div`
 					padding: 1px 80px;
 					cursor: default;
 					margin-top: 10px;
-					margin-bottom: 45px;
+					margin-bottom: 30px;
 				}
 			}
 				
@@ -237,21 +282,36 @@ export const Container = styled.div`
 				display: flex;
 				justify-content: center;
 
+				@media(max-width: 600px){
+					flex-direction: column;
+				}
+
 				div.explain{
 
-					& + div.explain{
-						margin-left: 54px;
+					@media(max-width: 600px){
+						margin-left: 88px;
 					}
 
-					div.explainTitle{
+					& + div.explain{
 
+						margin-left: 50px;
+
+						@media(max-width: 600px){
+							margin-left: 88px;
+						}
+					}
+
+
+					div.explainTitle{
 						display: flex;
-						align-items: center;	
+						align-items: center;
+
 					}
 				}
 
 				div.explainDescription{
 					margin-top: 16px;
+					margin-bottom: 45px;
 					width: 220px;
 					
 
@@ -269,8 +329,7 @@ export const Container = styled.div`
 		width: 100%;
 		height: 350px;
 		
-		background: #262626 url(${backgroundImg}) 0% 20% no-repeat;
-
+		
 		p.main{
 			font-weight: 500;
 			font-size: 30px;

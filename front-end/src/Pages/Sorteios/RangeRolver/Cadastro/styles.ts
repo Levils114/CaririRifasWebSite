@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 import backgroundImg from './../../../../Assets/Background/background2.png';
 
+
 export const Container = styled.div`
 	
-	background: #262626 url(${backgroundImg}) 100% 50% no-repeat;
+	
 
 	div.formContainer{
 		display: flex;
@@ -14,8 +15,13 @@ export const Container = styled.div`
 
 		div.form{
 			width: 900px;
-			background: rgba(18, 18, 18, 0.5);
+			background: rgba(18, 18, 18, 1);
 			border-radius: 20px;
+
+			@media(max-width: 600px){
+				width: 100%;
+				background: rgba(18,18,18,0.5);
+			}
 
 			div.voltar{
 				margin-left: 24px;
@@ -42,6 +48,10 @@ export const Container = styled.div`
 				margin-left: 34%;
 				margin-top: 30px;
 
+				@media(max-width: 600px){
+					margin-left: 10%;
+				}
+
 				p{
 					font-size: 18px;
 					margin-bottom: 8px;
@@ -64,6 +74,11 @@ export const Container = styled.div`
 						font-size: 17px;
 						color: #fff;
 						text-align: center;
+
+						@media(max-width: 600px){
+							width: 40%;
+							margin-left: 8px;
+						}
 
 						& + button{
 							margin-left: 16px;

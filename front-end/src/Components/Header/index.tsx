@@ -1,18 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Link} from 'react-router-dom';
 
-import { FirstHeader, HeaderPrimary } from './styles';
+import { FirstHeader, HeaderPrimary, NavBar } from './styles';
+
+import Media from 'react-media';
 
 import {AiOutlineWhatsApp, AiOutlineInstagram, AiOutlineHome} from 'react-icons/ai';
 import {MdEmail, MdAttachMoney} from 'react-icons/md';
 import {BsBuilding} from 'react-icons/bs';
-import {FiPhone} from 'react-icons/fi';
+import {FiPhone, FiMenu} from 'react-icons/fi';
 import {RiTrophyLine} from 'react-icons/ri';
+import {GiCancel} from 'react-icons/gi';
 
-import logoImg from './../../Assets/Menu/logo3.png'
+import logoImg from './../../Assets/Header/logoImg.png';
 
 const Header: React.FC = () => {
+
+	const [isInMobileDevice, setIsInMobileDevice] = useState(false);
+
+	function handdleMenuOption(){
+		setIsInMobileDevice(true);
+	}
+
+	function handdleCancelMenuOption(){
+		setIsInMobileDevice(false);
+	}
+
 	return (
 			<>
 				<FirstHeader>
@@ -43,38 +57,83 @@ const Header: React.FC = () => {
 					</div>
 				</FirstHeader>
 
-				<HeaderPrimary>
-					<header>
-						<div>
-							<img src={logoImg} alt="logo"/>
-						</div>
+				{!isInMobileDevice && (
+					<HeaderPrimary>
+						<header>
+							<div>
+								<button onClick={handdleMenuOption}>
+									<FiMenu size={27} />
+								</button>
 
-						<nav>
-					        <Link to="/" className="hvr-underline-from-center">
-					          
-					          <p><AiOutlineHome size={22} />INÍCIO</p>
-					        </Link>
+								<img src={logoImg} alt="logo"/>
+							</div>
 
-					        <Link to="/empresa" className="hvr-underline-from-center">			          
-					          <p><BsBuilding size={22} />EMPRESA</p>
-					        </Link>
 
-					        <Link to="/sorteios" className="hvr-underline-from-center">
-					          <p><RiTrophyLine size={22} />SORTEIOS</p>
-					        </Link>
+							<Media query="(min-width: 600px)">
 
-					        <Link to="/como-pagar" className="hvr-underline-from-center">
-					          <p><MdAttachMoney size={22} />COMO PAGAR</p>
-					        </Link>
+								
+									<nav className="pages">
+										<Link to="/" className="hvr-underline-from-center" id="firstLink">					          
+												<p><AiOutlineHome size={22} /><b>INÍCIO</b></p>
+										</Link>
 
-					        <Link to="/contatos" className="hvr-underline-from-center" id="lastLink">
-					          <p><FiPhone size={22}/>CONTATOS</p>
-					        </Link>
+										<Link to="/empresa" className="hvr-underline-from-center">			          
+												<p><BsBuilding size={22} /><b>EMPRESA</b></p>
+										</Link>
 
-					        
-					     </nav>
-				     </header>
-				</HeaderPrimary>
+										<Link to="/sorteios" className="hvr-underline-from-center">
+												<p><RiTrophyLine size={22} /><b>SORTEIOS</b></p>
+										</Link>
+
+										<Link to="/como-pagar" className="hvr-underline-from-center">
+												<p><MdAttachMoney size={22} /><b>COMO PAGAR</b></p>
+										</Link>
+
+										<Link to="/contatos" className="hvr-underline-from-center" id="lastLink">
+												<p><FiPhone size={22}/><b>CONTATOS</b></p>
+										</Link>
+
+									</nav>
+								
+
+
+						     </Media>
+					     </header>
+					</HeaderPrimary>
+				)}	
+
+				{isInMobileDevice && (
+							<>
+								<NavBar>
+									<button onClick={handdleCancelMenuOption}>
+										<GiCancel size={27} />
+									</button>	
+
+									<nav className="pages">
+								        <Link to="/" className="hvr-underline-from-center">					          
+								          <p><AiOutlineHome size={22} />INÍCIO</p>
+								        </Link>
+
+								        <Link to="/empresa" className="hvr-underline-from-center">			          
+								          <p><BsBuilding size={22} />EMPRESA</p>
+								        </Link>
+
+								        <Link to="/sorteios" className="hvr-underline-from-center">
+								          <p><RiTrophyLine size={22} />SORTEIOS</p>
+								        </Link>
+
+								        <Link to="/como-pagar" className="hvr-underline-from-center">
+								          <p><MdAttachMoney size={22} />COMO PAGAR</p>
+								        </Link>
+
+								        <Link to="/contatos" className="hvr-underline-from-center" id="lastLink">
+								          <p><FiPhone size={22}/>CONTATOS</p>
+								        </Link>
+								     </nav>
+								</NavBar>
+							</>	
+						)}
+
 			</>
 		);
 }

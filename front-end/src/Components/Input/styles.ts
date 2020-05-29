@@ -16,6 +16,10 @@ export const Container = styled.div<InputProps>`
 	padding: 16px;
 	width: 50%;
 
+	@media(max-width: 600px){
+		width: 90%;
+	}
+
 	input{
 		flex: 1;
 		background: transparent;
@@ -30,6 +34,11 @@ export const Container = styled.div<InputProps>`
 
 	> svg{
 		margin-right: 10px;
+
+		@media(max-width: 600px){
+			visibility: hidden;
+			margin-right: -20px;
+		}
 
 	}
 
