@@ -3,6 +3,8 @@ import React from 'react';
 import Header from './../../Components/Header';
 import Footer from './../../Components/Footer';
 
+import Media from 'react-media';
+
 import {Link} from 'react-router-dom';
 
 import { Slide } from 'react-slideshow-image';
@@ -35,7 +37,7 @@ const Menu = () => {
 			<Container>
 			<Header />
 
-
+			
 			<div className="slide-container">
 				<Slide {...properties}>
 		          <div className="each-slide">
@@ -56,7 +58,7 @@ const Menu = () => {
 		              <span>LANDER 255CC</span>
 		              <p className="ano">2017</p>
 		              <button>
-		              	<Link to="/teste">ENCERRADO</Link>
+		              	<Link to="/sorteio/lander-255-cc">ENCERRADO</Link>
 		              </button>	
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um moto</p>	
 		              <img src={img2} alt="slideImg2"/>
@@ -64,13 +66,17 @@ const Menu = () => {
 		          </div>
 		          <div className="each-slide">
 		            <div className='img-background'>
+
 		              <p className="marca">DISCOVERY</p>
 		              <span>LAND ROVER</span>
 		              <p className="ano">2017</p>
+
 		              <button>
 		              	<Link to="/sorteio/range-rover">EM BREVE</Link>
 		              </button>
+
 		              <p className="description">Comprando uma centena por R$ 100,00 - Você concorre a um carro</p>		
+		              
 		              <img src={img3} alt="slideImg3"/>
 		            </div>
 		          </div>
@@ -114,7 +120,7 @@ const Menu = () => {
 					     	<p className="modelo">Lander 255cc</p>
 					     	<p className="data">Sorteio dia 11/05/2020</p>
 					     	<Button typeOfButton="terminado">
-					     		<Link>Ver Resultado ✔</Link>
+					     		<Link to="/sorteio/lander-255-cc">Ver Resultado ✔</Link>
 					     	</Button>
 				     	</div>
 				     </div>

@@ -92,7 +92,7 @@ const Sorteios: React.FC = () => {
 									     	<p className="modelo">Lander 255cc</p>
 									     	<p className="data">Sorteio dia 11/05/2020</p>
 									     	<Button typeOfButton="terminado">
-									     		<Link to="teste">Ver Resultado ✔</Link>
+									     		<Link to="/sorteio/lander-255-cc">Ver Resultado ✔</Link>
 									     	</Button>
 								     	</div>
 

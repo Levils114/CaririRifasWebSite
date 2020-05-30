@@ -23,8 +23,8 @@ export const Container = styled.div`
 			transition: all 0.2s;
 
 			@media(max-width: 600px){
-				
-				height: 220px;
+				width: 488;
+				height: 180px;
 				margin-bottom: 16px;
 
 			}	
@@ -43,7 +43,7 @@ export const Container = styled.div`
 			@media(max-width: 600px){
 				font-size: 20px;
 				margin-left: 30px;
-				margin-top: 90px;
+				margin-top: 70px;
 			}
 		} 
 
@@ -60,7 +60,7 @@ export const Container = styled.div`
 			@media(max-width: 600px){
 				font-size: 12.5px;
 				margin-left: 30px;
-				margin-top: 70px;
+				margin-top: 55px;
 			}
 		}
 
@@ -73,7 +73,7 @@ export const Container = styled.div`
 			@media(max-width: 600px){
 				font-size: 12.5px;
 				margin-left: 30px;
-				margin-top: 120px;
+				margin-top: 95px;
 			}
 		}
 
@@ -103,7 +103,7 @@ export const Container = styled.div`
 
 			@media(max-width: 600px){
 				margin-left: 30px;
-				margin-top: 150px;
+				margin-top: 120px;
 				padding: 10px 0px;
 			}
 		}
@@ -161,6 +161,7 @@ export const Container = styled.div`
 			
 			@media(max-width: 600px){
 				flex-direction: column;
+				align-items: center;
 			}
 			
 
@@ -171,14 +172,14 @@ export const Container = styled.div`
 				transition: all 0.2s;
 
 				@media(max-width: 600px){
-					margin-left: 45px;
+					margin-left: 0px;
 				}
 
 				& + div.model{
 					margin-left: 8px;
 
 					@media(max-width: 600px){
-						margin-left: 45px;
+						margin-left: 0px;
 					}
 				}
 
@@ -274,6 +275,10 @@ export const Container = styled.div`
 					cursor: default;
 					margin-top: 10px;
 					margin-bottom: 30px;
+
+					@media(max-width: 600px){
+						padding: 1px 120px;
+					}
 				}
 			}
 				
@@ -284,12 +289,13 @@ export const Container = styled.div`
 
 				@media(max-width: 600px){
 					flex-direction: column;
+					align-items: center;
 				}
 
 				div.explain{
 
 					@media(max-width: 600px){
-						margin-left: 88px;
+						margin-left: 0px;
 					}
 
 					& + div.explain{
@@ -297,7 +303,7 @@ export const Container = styled.div`
 						margin-left: 50px;
 
 						@media(max-width: 600px){
-							margin-left: 88px;
+							margin-left: 0px;
 						}
 					}
 

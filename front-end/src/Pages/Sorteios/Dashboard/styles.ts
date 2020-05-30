@@ -75,6 +75,7 @@ export const SorteiosPage = styled.div`
 
 		@media(max-width: 600px){
 			flex-direction: column;
+			align-items: center;
 		}
 
 
@@ -89,7 +90,7 @@ export const SorteiosPage = styled.div`
 			transition: all 0.2s;
 
 			@media(max-width: 600px){
-				margin-left: 35px;
+				margin-left: 0px;
 				margin-bottom: 40px;
 			}
 
@@ -102,7 +103,7 @@ export const SorteiosPage = styled.div`
 
 				@media(max-width: 600px){
 					margin-bottom: 40px; 
-					margin-left: 45px;
+					margin-left: 0px;
 				}
 			}
 
