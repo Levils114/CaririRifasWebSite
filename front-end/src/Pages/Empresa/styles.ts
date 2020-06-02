@@ -4,7 +4,7 @@ export const Container = styled.div`
 	
 	div.aboutUs{
 		background: #121212;
-		height: 350px;
+		height: 510px;
 
 		@media(max-width: 600px){
 			height: auto;
@@ -26,17 +26,35 @@ export const Container = styled.div`
 			justify-content: center;
 			width: 100%;
 
+
+
 			@media(max-width: 600px){
 				flex-direction: column;
 				
 				align-items: center;
 			}
 
+			div#firstModel{
+				margin-left: 125px;
+
+				@media(max-width: 600px){
+					margin-left: 0px;
+				}
+			}
+
 			div.divToOrganize{
-				width: 320px;
+				width: 250px;
 				margin-top: 24px;
 				margin-bottom: 24px;
 				margin-right: 16px;
+
+				& + div.divToOrganize{
+					margin-left: 80px;
+
+					@media(max-width: 600px){
+						margin-left: 0px;
+					}
+				}
 
 				@media(max-width: 600px){
 					margin-bottom: 16px;
@@ -45,7 +63,7 @@ export const Container = styled.div`
 				}
 
 				p{
-					font-size: 18px;
+					font-size: 20px;
 				}
 			}
 		}

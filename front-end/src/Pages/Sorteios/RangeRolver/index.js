@@ -8,8 +8,7 @@ import {Link} from 'react-router-dom';
 
 import Header from './../../../Components/Header/';
 import Footer from './../../../Components/Footer/';
-import ButtonOfRifas from './../../../Components/ButtonOfRifas/';
-import Tooltip from './../../../Components/Tooltip/';
+
 
 import {Slide} from 'react-slideshow-image';
 
@@ -68,7 +67,7 @@ const RangeRover = () => {
 	  });
 	}
 
-	console.log(numbersOfRifas);
+	
 	 	
 
 

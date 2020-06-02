@@ -1,5 +1,7 @@
 import styled, {css} from 'styled-components';
 
+import waves from './../../Assets/Header/waves.png';
+
 interface HeaderProps{
 	isFocus?: boolean;
 }
@@ -89,8 +91,8 @@ export const FirstHeader = styled.div`
 
 
 export const HeaderPrimary = styled.div<HeaderProps>`
-	background-color: #0d0d0d;
-	height: 150px;
+	background: #131313 url(${waves}) bottom no-repeat ;
+	height: 112px;
 
 	header {
 	    width: 100%;
@@ -105,10 +107,10 @@ export const HeaderPrimary = styled.div<HeaderProps>`
 	    	display: flex;
 	    	align-items: center;
 
-	    	margin-top: 25px;
+	    	margin-top: 7px;
 
 	    	@media(max-width: 600px){
-	    		margin-top: 30px;
+	    		margin-top: 8px;
 	    	}
 
 	    	button{
@@ -139,7 +141,7 @@ export const HeaderPrimary = styled.div<HeaderProps>`
 		}
 
 	    nav {
-	    	margin-top: 20px;
+	    	
 
 	    	@media(max-width: 600px){
 	    		visibility: hidden;

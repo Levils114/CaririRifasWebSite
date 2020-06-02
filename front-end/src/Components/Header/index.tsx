@@ -12,8 +12,8 @@ import {BsBuilding} from 'react-icons/bs';
 import {FiPhone, FiMenu} from 'react-icons/fi';
 import {RiTrophyLine} from 'react-icons/ri';
 import {GiCancel} from 'react-icons/gi';
-
 import logoImg from './../../Assets/Header/logoImg.png';
+
 
 const Header: React.FC = () => {
 
@@ -59,6 +59,7 @@ const Header: React.FC = () => {
 
 				{!isInMobileDevice && (
 					<HeaderPrimary>
+
 						<header>
 							<div>
 								<button onClick={handdleMenuOption}>
@@ -74,23 +75,23 @@ const Header: React.FC = () => {
 								
 									<nav className="pages">
 										<Link to="/" className="hvr-underline-from-center" id="firstLink">					          
-												<p><AiOutlineHome size={22} /><b>INÍCIO</b></p>
+												<p><AiOutlineHome size={22} />INÍCIO</p>
 										</Link>
 
 										<Link to="/empresa" className="hvr-underline-from-center">			          
-												<p><BsBuilding size={22} /><b>EMPRESA</b></p>
+												<p><BsBuilding size={22} />EMPRESA</p>
 										</Link>
 
 										<Link to="/sorteios" className="hvr-underline-from-center">
-												<p><RiTrophyLine size={22} /><b>SORTEIOS</b></p>
+												<p><RiTrophyLine size={22} />SORTEIOS</p>
 										</Link>
 
 										<Link to="/como-pagar" className="hvr-underline-from-center">
-												<p><MdAttachMoney size={22} /><b>COMO PAGAR</b></p>
+												<p><MdAttachMoney size={22} />COMO PAGAR</p>
 										</Link>
 
 										<Link to="/contatos" className="hvr-underline-from-center" id="lastLink">
-												<p><FiPhone size={22}/><b>CONTATOS</b></p>
+												<p><FiPhone size={22}/>CONTATOS</p>
 										</Link>
 
 									</nav>

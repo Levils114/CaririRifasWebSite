@@ -9,7 +9,7 @@ export const FooterPrimary = styled.div`
 	width: 100%;
 	
 	@media(max-width: 600px){
-		background: #0d0d0d url(${marcaDagua2}) no-repeat 50% ;
+		background: #0d0d0d url(${marcaDagua2}) no-repeat 50% 75% ;
 	}
 
 
