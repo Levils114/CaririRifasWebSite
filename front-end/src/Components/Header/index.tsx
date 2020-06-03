@@ -12,7 +12,8 @@ import {BsBuilding} from 'react-icons/bs';
 import {FiPhone, FiMenu} from 'react-icons/fi';
 import {RiTrophyLine} from 'react-icons/ri';
 import {GiCancel} from 'react-icons/gi';
-import logoImg from './../../Assets/Header/logoImg.png';
+
+import logoImg from './../../Assets/Header/LOGO6teste.png';
 
 
 const Header: React.FC = () => {
@@ -62,9 +63,11 @@ const Header: React.FC = () => {
 
 						<header>
 							<div>
-								<button onClick={handdleMenuOption}>
-									<FiMenu size={27} />
-								</button>
+								<Media query="(max-width: 600px)">
+									<button onClick={handdleMenuOption}>
+										<FiMenu size={27} />
+									</button>
+								</Media>
 
 								<img src={logoImg} alt="logo"/>
 							</div>

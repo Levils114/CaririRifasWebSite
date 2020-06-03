@@ -20,19 +20,19 @@ const Empresa: React.FC = () => {
 
 						<div className="aboutUsDescription">
 							<div className="divToOrganize" id="firstModel">
-								<p>A Cariri Rifas é uma empresa especializada na venda de cotas  de Ativos na Modalidade Filantropia Premiável, com atuação em todo o território nacional com sede na cidade de  Juazeiro do Norte, com inscrição no  (CNPJ nº xx.xxx.xxx/0001-xx).</p>
+								<p>A Cariri de Prêmios é uma empresa especializada na venda de cotas  de Ativos na Modalidade Filantropia Premiável, com atuação em todo o território nacional com sede na cidade de  Juazeiro do Norte, com inscrição no  (CNPJ nº xx.xxx.xxx/0001-xx).</p>
 							</div>
 
 							
 
 							<div className="divToOrganize">
-								<p>Além de concorrer a prêmios de Ativos, com o Cariri Rifas  você pode contribuir para o desenvolvimento e custeio da CRIASA (instituição de apoio ao Idoso), através da distribuição de participação nos lucros, agregando recursos que serão investidos em assistência à saúde, assistência social e acolhimento aos idosos carentes.</p>
+								<p>Além de concorrer a prêmios de Ativos, com a Cariri de Prêmios você pode contribuir para o desenvolvimento e custeio da CRIASA (instituição de apoio ao Idoso), através da distribuição de participação nos lucros, agregando recursos que serão investidos em assistência à saúde, assistência social e acolhimento aos idosos carentes.</p>
 							</div>
 
 							
 
 							<div className="divToOrganize" >
-								<p>Conheça mais sobre o trabalho e os projetos da Cariri Rifas no site: XXXXXXX</p>
+								<p>Conheça mais sobre o trabalho e os projetos da Cariri de Prêmios no site: XXXXXXX</p>
 							</div>
 
 							

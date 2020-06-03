@@ -130,11 +130,11 @@ export const HeaderPrimary = styled.div<HeaderProps>`
 
 		    img{
 		    	height: 100px;
-		    	width: 230px;
+		    	width: 300px;
 		    	margin-left: 100px;
 
 		    	@media(max-width: 600px){
-		    		margin-left: 40px;
+		    		margin-left: 10px;
 		    	}
 		    	
 		    }
@@ -160,7 +160,7 @@ export const HeaderPrimary = styled.div<HeaderProps>`
 		        height: 42px;
 
 		        & + a {
-		          margin-left: 26px;
+		          margin-left: 20px;
 		        }
 		        &:hover {
 		          opacity: 0.6;
