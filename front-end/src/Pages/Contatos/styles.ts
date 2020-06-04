@@ -78,9 +78,9 @@ export const Container = styled.div`
 				}
 
 				a.instagram{
-					border: 3px solid #ff0f4d;
+					border: 3px solid #ff1940#ff4060;
 					color: #ECE5DD;
-					background: #F73466;
+					background: #ff4060;
 				}
 
 				a.email{

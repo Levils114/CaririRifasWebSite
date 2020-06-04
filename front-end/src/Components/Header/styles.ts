@@ -130,11 +130,12 @@ export const HeaderPrimary = styled.div<HeaderProps>`
 
 		    img{
 		    	height: 100px;
-		    	width: 300px;
+		    	width: 350px;
 		    	margin-left: 100px;
 
 		    	@media(max-width: 600px){
-		    		margin-left: 10px;
+		    		margin-left: 2px;
+		    		width: 300px;
 		    	}
 		    	
 		    }
@@ -260,7 +261,7 @@ export const NavBar = styled.div`
 		        display: flex;
 		        align-items: center;
 
-		        border: 2px solid #CCAD1E;
+		        border: 2px solid #dcaf27;
 		        height: 42px;
 
 		        @media(max-width: 600px){
@@ -282,7 +283,7 @@ export const NavBar = styled.div`
 		        }
 
 		        svg{
-						color: #CCAD1E;
+						color: #dcaf27;
 						margin-right: 6px;
 					}
 
@@ -291,7 +292,7 @@ export const NavBar = styled.div`
 		        	align-items: center;
 
 			        svg{
-						color: #CCAD1E;
+						color: #dcaf27;
 						margin-right: 4px;
 					}
 				}	
@@ -315,7 +316,7 @@ export const NavBar = styled.div`
 	        left: 51%;
 	        right: 51%;
 	        bottom: 0;
-	        background: #CCAD1E;
+	        background: #dcaf27;
 	        height: 4px;
 	        -webkit-transition-property: left, right;
 	        transition-property: left, right;

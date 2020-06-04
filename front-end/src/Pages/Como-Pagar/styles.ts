@@ -13,6 +13,8 @@ export const Container = styled.div`
 		color: #d1d1d1;
 		height: 130px;
 		align-items: center;
+		border: 3px solid #eab727;
+		border-radius: 16px;
 
 		h2{
 			margin-left: 9%;
@@ -37,6 +39,7 @@ export const Container = styled.div`
 			justify-content: center;
 			margin-top: 40px;
 			margin-bottom: 30px;
+
 			
 			a{
 				color: #d1d1d1;

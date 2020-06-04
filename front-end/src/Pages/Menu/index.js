@@ -21,6 +21,8 @@ import img4 from './../../Assets/Menu/rifasdovale_1589114665.jpg';
 import img5 from './../../Assets/Menu/rifasdovale_1588040562.jpg';
 import img6 from './../../Assets/Menu/1.jpg';
 
+import criasaLogo from './../../Assets/Menu/criasa.jpeg';
+
 const properties = {
   transitionDuration: 500,
   infinite: true,
@@ -187,15 +189,17 @@ const Menu = () => {
 							</div>
 
 			     <div className="filantropiaContainer">
-			     	<p className="main">FILANTROPIA</p>
+			     	<div className="title">
+					     <p className="main">FILANTROPIA</p>
+					</div>
 
 			     	<div className="divisor">
 			     		<button></button>
 			     	</div>
 
-			     	
 				     <div className="filantropia">
-
+				     	<img src={criasaLogo} />
+				     	<p>A Cariri de Prêmios tem como intuito ajudar o Instituto Criasa, que há<br/> anos tem como objetivo ser uma casa de referência para implementação<br/> de ações sócio assistências.</p>
 				     </div>
 			     </div>
 			</div>

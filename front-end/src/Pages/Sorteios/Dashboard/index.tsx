@@ -46,8 +46,6 @@ const Sorteios: React.FC = () => {
 		 setEmBreve(false);
 	}
 
-	console.log(todos);
-	console.log(abertos);
 
 	return(
 		<Container>

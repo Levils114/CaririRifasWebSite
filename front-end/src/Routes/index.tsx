@@ -7,7 +7,6 @@ import Empresa from './../Pages/Empresa/';
 import Sorteios from './../Pages/Sorteios/Dashboard/index';
 import ComoPagar from './../Pages/Como-Pagar/';
 import Contatos from './../Pages/Contatos/';
-import Admin from './../Pages/Admin/Dashboard/';
 import CruzerLTTurbo from './../Pages/Sorteios/CruzerLTTurbo/index';
 import RangeRover from './../Pages/Sorteios/RangeRolver/index';
 import Lander255CC from './../Pages/Sorteios/Lander255CC/index';
@@ -23,7 +22,6 @@ const Routes: React.FC = () => {
 			<Route path="/sorteios" component={Sorteios} />
 			<Route path="/como-pagar" component={ComoPagar} />
 			<Route path="/contatos" component={Contatos} />
-			<Route path="/admin-page-cariri-de-prêmios" component={Admin} />
 			<Route path="/sorteio/cruzer-lt-turbo" component={CruzerLTTurbo} />
 			<Route path="/sorteio/range-rover" component={RangeRover} />
 			<Route path="/sorteio/lander-255-cc" component={Lander255CC} />

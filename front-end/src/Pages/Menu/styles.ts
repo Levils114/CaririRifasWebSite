@@ -333,18 +333,28 @@ export const Container = styled.div`
 
 	div.filantropiaContainer{
 		width: 100%;
-		height: 350px;
 		
-		
-		p.main{
-			font-weight: 500;
-			font-size: 30px;
-			
-			
-			margin-bottom: 10px;
-			color: #fff;
-			text-align: center;
-		}
+		div.title{
+				height: 70px;
+				
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+
+				p.main{
+						margin-top: 7px;
+						font-weight: 500;
+						font-size: 30px;
+						
+						color: #fff;
+						text-align: center;
+
+						@media(max-width: 600px){
+							font-size: 25px;
+						}
+				}		
+			}		
 
 		div.divisor{
 			
@@ -357,7 +367,40 @@ export const Container = styled.div`
 				
 				padding: 1px 60px;
 				cursor: default;
-				margin-bottom: 50px;
+				margin-bottom: 25px;
+			}
+		}
+
+		div.filantropia{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 34px;
+
+			@media(max-width: 600px){
+				flex-direction: column;
+			}
+
+			img{
+				width: 350px;
+				height: 250px;
+
+				@media(max-width: 600px){
+					height: 190px;
+					width: 284px;
+				}
+
+			}
+
+			p{
+				font-size: 22px;
+				margin-left: 24px;
+
+				@media(max-width: 600px){
+					width: 290px;
+					margin-top: 16px;
+					
+				}
 			}
 		}
 	}
