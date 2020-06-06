@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import Header from './../../../Components/Header/';
 import Footer from './../../../Components/Footer/';
 
+import {BsLockFill, BsUnlockFill, BsClockFill, BsList} from 'react-icons/bs';
+
 import img4 from './../../../Assets/Menu/rifasdovale_1589114665.jpg';
 import img5 from './../../../Assets/Menu/rifasdovale_1588040562.jpg';
 import img6 from './../../../Assets/Menu/1.jpg';
@@ -54,10 +56,10 @@ const Sorteios: React.FC = () => {
 			<div className="background">
 				<Filtros>
 						<div className="filtros">
-							<Button className="firstButton" onClick={handdleTodos}>Todos</Button>
-							<Button onClick={handdleAbertos}>Abertos</Button>
-							<Button onClick={handdleEmBreve}>Em Breve</Button>
-							<Button className="lastButton" onClick={handdleEncerrado}>Encerrado</Button>
+							<Button className="firstButton" onClick={handdleTodos}><BsList size={22}/><p>Todos</p></Button>
+							<Button onClick={handdleAbertos}><BsUnlockFill size={22} /><p>Abertos</p></Button>
+							<Button onClick={handdleEmBreve}><BsClockFill size={22} /><p>Em Breve</p></Button>
+							<Button className="lastButton" onClick={handdleEncerrado}><BsLockFill size={22} /><p>Encerrado</p></Button>
 						</div>	
 
 						{todos===true && (

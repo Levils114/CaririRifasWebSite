@@ -28,6 +28,7 @@ export const Filtros = styled.div`
 	div.filtros{
 		margin-left: 79px;
 		margin-top: 44px;
+		display: flex;
 
 		@media(max-width: 600px){
 			margin-left: 10px;
@@ -40,22 +41,41 @@ export const Filtros = styled.div`
 			border: 1px solid #d1d1d1;
 			transition: all 0.2s;
 			font-weight: 400;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			border-radius: 5px;
+
+			p{
+				font-size: 18px;
+
+				@media(max-width: 600px){
+					font-size: 13px;
+				}
+			}
+			
+
+			svg{
+				color: #CCAD1E;
+			}
 
 			&:hover{
 				transform: scale(1.05);
 				background: #121212;
 			}
 
+			& + button{
+				margin-left: 4px;
+
+				@media(max-width: 600px){
+					margin-left: 0px;
+				}
+			}
+
 			
 		}
 
-		button.firstButton{
-			border-radius: 5px 0 0 5px;
-		}
-
-		button.lastButton{
-			border-radius: 0 5px 5px 0;
-		}
+		
 
 	}
 `;

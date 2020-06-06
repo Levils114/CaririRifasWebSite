@@ -5,72 +5,137 @@ import marcaDagua2 from './../../Assets/Menu/marcadagua2.png'
 
 
 export const FooterPrimary = styled.div`
-	background: #0d0d0d url(${marcaDagua}) no-repeat 50% ;
-	width: 100%;
 	
-	@media(max-width: 600px){
-		background: #0d0d0d url(${marcaDagua2}) no-repeat 50% 75% ;
+	width: 100%;
+
+	div.etapas{
+		background: #0d0d0d;
+		height: 350px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		@media(max-width: 600px){
+			height: auto;
+			margin-top: 16px;
+		}
+
+		div.explainBox{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 16px;
+
+			@media(max-width: 600px){
+				flex-direction: column;
+			}
+			
+
+			div.explain{
+
+				& + div.explain{
+					margin-left: 44px;
+
+					@media(max-width: 600px){
+						margin-left: 0px;
+						margin-top: 16px;
+					}
+				}
+
+				div.explainTitle{
+					display: flex;
+					align-items: center;
+					margin-bottom: 12px;
+				}
+
+				div.explainDescription{
+					width: 220px;
+
+					a{
+						color: #d1d1d1;
+					}
+				}
+			}
+		}
 	}
 
+	div.formasDePagamento{
+		div.formasDePagamentoTitle{
+			display: flex;
+			justify-content: center;
+		}
 
-	header {
-		height: 180px;
-	    margin: 0 auto;
-	    display: flex;
-		justify-content: space-between;
-		align-items: center;
-	    
-	    div{
-	    	
-	    	align-items: center;
-	    	
+		div.opcoes{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 80px;
 
-	    	p{
-		    	font-size: 16px;
-		    	font-weight: 500;
-		    	margin-left: 34px;
+			img{
+				height: 60px;
+				width: 100px;
 
-		    	@media(max-width: 600px){
-		    		margin-left: 10px;
-		    		font-size: 14px;
-		    	}
+				@media(max-width: 600px){
+					width: 80px;
+					height: 60px;
+				}
 
-		    	& + p{
-		    		margin-top:24px;
-		    	}
-		    }
-	    }
-
-	    
-	    nav{
-
-	    	display: flex;
-
-		    a{
-		    	color: #CCAD1E;
-		    	
-
-		    	& + a{
+				& + img{
 					margin-left: 4px;
 				}
-		    }
-
-		    a.lastLink{
-		    	margin-right: 26px;
-
-		    	@media(max-width: 600px){
-		    		margin-right: 4px;
-		    	}
-		    }
-
-		    svg{
-				transition: all 0.2s;
-				
 			}
+		}
+	}
 
-			a:hover svg{
-				transform: scale(1.3);
+	div.realFooter{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		div.comments{
+			p{
+				font-size: 18px;
+
+				@media(max-width: 600px){
+					font-size: 12px;
+				}
+
+				& + p{
+					margin-top: 16px;
+
+					@media(max-width: 600px){
+						margin-top: 5px;
+					}
+				}
 			}
-		  }
-		}  
+		}
+
+		div.links{
+			display: flex;
+
+			div.box{
+
+				& + div.box{
+					margin-left: 10px;
+
+					@media(max-width: 600px){
+						margin-left: 4px;
+					}
+				}
+
+				svg{
+					color: #d1d1d1;
+				}
+
+				a{
+					text-decoration: none;
+					color: #d1d1d1;
+					display: flex;
+					align-items: center;
+					
+				}
+			}
+		}
+	}
+ 
 `

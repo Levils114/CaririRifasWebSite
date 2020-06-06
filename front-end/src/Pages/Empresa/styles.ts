@@ -4,7 +4,7 @@ export const Container = styled.div`
 	
 	div.aboutUs{
 		background: #121212;
-		height: 510px;
+		height: 450px;
 
 		@media(max-width: 600px){
 			height: auto;
@@ -14,16 +14,20 @@ export const Container = styled.div`
 			height: 80px;
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			background: #CCAD1E;
 
 			h1{
-				text-align: center;
+				margin-left: 45px;
+
+				@media(max-width: 600px){
+					text-align: center;
+				}
 			}
 		}	
 
 		div.aboutUsDescription{
 			display: flex;
-			justify-content: center;
+			
 			width: 100%;
 
 
@@ -35,7 +39,7 @@ export const Container = styled.div`
 			}
 
 			div#firstModel{
-				margin-left: 125px;
+				margin-left: 45px;
 
 				@media(max-width: 600px){
 					margin-left: 0px;
@@ -43,7 +47,7 @@ export const Container = styled.div`
 			}
 
 			div.divToOrganize{
-				width: 250px;
+				width: 300px;
 				margin-top: 24px;
 				margin-bottom: 24px;
 				margin-right: 16px;
@@ -82,16 +86,21 @@ export const Container = styled.div`
 			height: 80px;
 			display: flex;
 			align-items: center;
-			justify-content: center;
+			background: #CCAD1E;
+
 
 			h1{
-				text-align: center;
+				margin-left: 45px;
+
+				@media(max-width: 600px){
+					text-align: center;
+				}
 			}
 		}	
 
 		div.companyContainer{
 			display: flex;
-			justify-content: center;
+			
 
 			@media(max-width: 600px){
 				flex-direction: column;
@@ -99,7 +108,7 @@ export const Container = styled.div`
 			}
 
 			div#firstModel{
-				margin-left: 120px;
+				margin-left: 45px;
 
 				@media(max-width: 600px){
 					margin-left: 0px;
@@ -108,7 +117,7 @@ export const Container = styled.div`
 
 			div.model{
 
-				margin-top: 10px;
+				margin-top: 34px;
 				margin-bottom: 24px;
 				
 

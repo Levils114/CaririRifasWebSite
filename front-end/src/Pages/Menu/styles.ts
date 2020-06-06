@@ -15,16 +15,18 @@ export const Container = styled.div`
 		align-items: flex-end;
 		width: 100%;
 	}
+
 	
 	div.img-background{
 		img{
 			width: 100%;
-			height: 530px;
+			height: 60%;
 			transition: all 0.2s;
 
+
 			@media(max-width: 600px){
-				width: 488;
-				height: 180px;
+				width: 100%;
+				height: 200px;
 				margin-bottom: 16px;
 
 			}	
@@ -34,16 +36,16 @@ export const Container = styled.div`
 
 		span{
 			position: absolute;
-			font-size: 50px;
+			font-size: 60px;
 			color: #fff;
 			margin-left: 180px;
-			margin-top: 220px;
+			margin-top: 2.6%;
 			font-weight: 500;
 
 			@media(max-width: 600px){
 				font-size: 20px;
 				margin-left: 30px;
-				margin-top: 70px;
+				margin-top: 62px;
 			}
 		} 
 
@@ -53,27 +55,27 @@ export const Container = styled.div`
 
 		p.marca{
 			margin-left: 185px;
-			margin-top: 190px;
-			font-size: 25px;
+			margin-top: 2.2%;
+			font-size: 30px;
 			color: #fff;
 
 			@media(max-width: 600px){
 				font-size: 12.5px;
 				margin-left: 30px;
-				margin-top: 55px;
+				margin-top: 47px;
 			}
 		}
 
 		p.ano{
 			margin-left: 185px;
-			margin-top: 280px;
-			font-size: 25px;
+			margin-top: 3.6%;
+			font-size: 30px;
 			color: #fff;
 
 			@media(max-width: 600px){
 				font-size: 12.5px;
 				margin-left: 30px;
-				margin-top: 95px;
+				margin-top: 87px;
 			}
 		}
 
@@ -82,11 +84,12 @@ export const Container = styled.div`
 			position: absolute;
 			background: transparent;
 			margin-left: 185px;
-			margin-top: 350px;
-			padding: 20px 20px;
+			margin-top: 4.5%;
+			padding: 30px 40px;
 			border-radius: 5px;
 			border: 2px solid #fff;
 			transition: all 0.2s;
+
 
 			&:hover{
 				transform: scale(1.05);
@@ -97,20 +100,33 @@ export const Container = styled.div`
 				color: #fff;
 				text-decoration: none;
 				font-weight: 500;
+				font-size: 25px;
+
+				@media(max-width: 600px){
+					font-size: 16px;
+				}
 
 				
 			}
 
 			@media(max-width: 600px){
 				margin-left: 30px;
-				margin-top: 120px;
+				margin-top: 108px;
 				padding: 10px 0px;
 			}
 		}
 
 		p.description{
 			margin-left: 185px;
-			margin-top: 480px;
+			margin-top: 6.3%;
+			font-size: 19px;
+
+			@media(max-width: 600px){
+				margin-top: 155px;
+				margin-left: 30px;
+				width: 180px;
+				font-size: 10.5px;
+			}
 		}
 	}
 
@@ -118,33 +134,45 @@ export const Container = styled.div`
 
 
 	div.slide-container {
-	  width: 100%;
-	  height: 100%;
-	  margin: auto;
+	 
+	  
+	 
 	}
 
 	div.sorteiosContainer{
 
-		p.main{
-			font-weight: 500;
-			font-size: 30px;
-			
-			
-			margin-bottom: 10px;
-			color: #fff;
-			text-align: center;
+		background: #121212;
 
-			@media(max-width: 600px){
-				font-size: 25px;
+		div.title{
+			height: 70px;
+			display: flex;
+			align-items: center;
+			background: #CCAD1E;
 
+			p.main{
+				font-weight: 500;
+				font-size: 30px;
+				margin-top: 7px;
+				
+				
+				margin-bottom: 10px;
+				color: #fff;
+				margin-left: 45px;
+
+				@media(max-width: 600px){
+					font-size: 25px;
+					text-align: center;
+
+				}
 			}
-		}
+		}	
 
 		div.divisor{
 			
 			width: 100%;
 			display: flex;
 			justify-content: center;
+			visibility: hidden;
 			
 			button{
 				border: 0px;
@@ -236,122 +264,32 @@ export const Container = styled.div`
 		}
 	}
 
-	div.etapas{
-			width: 100%;
-					
-			background: #121212;
-
-			div.title{
-				height: 70px;
-				
-				display: flex;
-				align-items: center;
-				justify-content: center;
-
-
-				p.main{
-						margin-top: 25px;
-						font-weight: 500;
-						font-size: 30px;
-						
-						color: #fff;
-						text-align: center;
-
-						@media(max-width: 600px){
-							font-size: 25px;
-						}
-				}		
-			}		
-
-			div.divisor{
-						
-				width: 100%;
-				display: flex;
-				justify-content: center;
-						
-				button{
-					border: 0px;
-					padding: 1px 80px;
-					cursor: default;
-					margin-top: 10px;
-					margin-bottom: 30px;
-
-					@media(max-width: 600px){
-						padding: 1px 120px;
-					}
-				}
-			}
-				
-			
-			div.explainBox{
-				display: flex;
-				justify-content: center;
-
-				@media(max-width: 600px){
-					flex-direction: column;
-					align-items: center;
-				}
-
-				div.explain{
-
-					@media(max-width: 600px){
-						margin-left: 0px;
-					}
-
-					& + div.explain{
-
-						margin-left: 50px;
-
-						@media(max-width: 600px){
-							margin-left: 0px;
-						}
-					}
-
-
-					div.explainTitle{
-						display: flex;
-						align-items: center;
-
-					}
-				}
-
-				div.explainDescription{
-					margin-top: 16px;
-					margin-bottom: 45px;
-					width: 220px;
-					
-
-					a{
-						color: #d1d1d1;
-						font-weight: 500;
-					}
-
-				}
-			}
-		}	
-	}
+	
 
 	div.filantropiaContainer{
 		width: 100%;
+		
 		
 		div.title{
 				height: 70px;
 				
 				display: flex;
 				align-items: center;
-				justify-content: center;
+				background: #CCAD1E;
+				
 
 
 				p.main{
 						margin-top: 7px;
 						font-weight: 500;
 						font-size: 30px;
-						
+						margin-left: 45px;
 						color: #fff;
-						text-align: center;
+						
 
 						@media(max-width: 600px){
 							font-size: 25px;
+							text-align: center;
 						}
 				}		
 			}		
@@ -361,6 +299,7 @@ export const Container = styled.div`
 			width: 100%;
 			display: flex;
 			justify-content: center;
+			visibility: hidden;
 			
 			button{
 				border: 0px;
@@ -375,10 +314,11 @@ export const Container = styled.div`
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin-bottom: 34px;
+			height: 310px;
 
 			@media(max-width: 600px){
 				flex-direction: column;
+				height: auto;
 			}
 
 			img{
