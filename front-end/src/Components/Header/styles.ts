@@ -2,7 +2,7 @@ import styled from 'styled-components'; // importando 'styled'  da biblioteca 's
 
 import waves from './../../Assets/Header/waves.png'; // importando a imagem 'waves' para uso de background
 
-export const FirstHeader = styled.div` ${/* criando a variável FirstHeader e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */}
+export const FirstHeader = styled.div` /* criando a variável FirstHeader e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */
 	display: flex;
 	background: #2e2e2e;
 	height: 30px;
@@ -86,7 +86,7 @@ export const FirstHeader = styled.div` ${/* criando a variável FirstHeader e im
 `;
 
 
-export const HeaderPrimary = styled.div` ${/* criando a variável HeaderPrimary e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */}
+export const HeaderPrimary = styled.div` /* criando a variável HeaderPrimary e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */
 	background: #131313 url(${waves}) bottom no-repeat ;
 	height: 112px;
 
@@ -221,7 +221,7 @@ export const HeaderPrimary = styled.div` ${/* criando a variável HeaderPrimary 
 	
 `;
 
-export const NavBar = styled.div` ${/* criando a variável NavBar e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */}
+export const NavBar = styled.div` /* criando a variável NavBar e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */
 
 	background: #121212;
 	display: flex;

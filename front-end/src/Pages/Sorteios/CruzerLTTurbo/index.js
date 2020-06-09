@@ -126,11 +126,11 @@ const CruzerLTTurbo = () => { // criando um componente chamado 'CruzerLTTurbo'
 								</Button>
 
 								{rifa.user.estado === "reservado" && ( // aqui é criado uma condicional para caso o estado esteja como 'reservado', mostre o tooltip abaixo
-									<span>A rifa de número {rifa.number} está reservada por {rifa.user.name}</span> {/* o tooltip mostra uma mensagem com a rifa reservada e quem a reservou */}
+									<span>A rifa de número {rifa.number} está reservada por {rifa.user.name}</span> // o tooltip mostra uma mensagem com a rifa reservada e quem a reservou 
 									)}
 
 								{rifa.user.estado === "pago" && ( // aqui é criado uma condicional para caso o estado esteja como 'pago', mostre o tooltip abaixo
-									<span>A rifa de número {rifa.number} está paga por {rifa.user.name}</span> {/* o tooltip mostra uma mensagem com a rifa paga e quem a pagou */}
+									<span>A rifa de número {rifa.number} está paga por {rifa.user.name}</span> /* o tooltip mostra uma mensagem com a rifa paga e quem a pagou */
 									)}
 							</div>	
 						</>

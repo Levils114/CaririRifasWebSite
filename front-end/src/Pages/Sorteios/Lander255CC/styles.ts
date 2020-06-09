@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components'; // importando 'styled'  da biblio
 import backgroundImg from './../../../Assets/Background/background2.png'; // importando 'backgroundImg' para ser a imagem de fundo
 
 
-export const Container = styled.div` ${/* cria uma variável chamada 'Container' e implementa dentro dela o styled, para passar a ser uma div */}
+export const Container = styled.div` /* cria uma variável chamada 'Container' e implementa dentro dela o styled, para passar a ser uma div */
 
 
 

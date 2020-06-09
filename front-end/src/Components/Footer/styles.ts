@@ -4,7 +4,7 @@ import marcaDagua from './../../Assets/Menu/marcadagua.png'; // importando a mar
 import marcaDagua2 from './../../Assets/Menu/marcadagua2.png'; // importando a marca d'agua 2 para utilizar como backgrund em dispositivos mobile
 
 
-export const FooterPrimary = styled.div` ${/* criando uma variável chamada 'FooterPrimary' e a implementando dentro dela uma div, ou seja, onde tem 'FooterPrimary', na vdd é uma div */}
+export const FooterPrimary = styled.div` /* criando uma variável chamada 'FooterPrimary' e a implementando dentro dela uma div, ou seja, onde tem 'FooterPrimary', na vdd é uma div */
 	
 	width: 100%;
 

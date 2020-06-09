@@ -1,17 +1,17 @@
 {
-   "type": "postgres", // diz que o tipo do banco de dados � postgres
-   "host": "192.168.99.100", // diz o ip que est� rodando o servidor
-   "port": 5432, //diz a porta que o servidor est� rodando
-   "username": "postgres", // diz o username para acessar o banco de dados
-   "password": "docker", // diz a senha para acessa o banco de dados
-   "database": "caririRifas_website", // diz o nome do banco de dados
-   "entities": [ // diz onde est�o as entidades
+   "type": "postgres", 
+   "host": "192.168.99.100", 
+   "port": 5432, 
+   "username": "postgres", 
+   "password": "docker", 
+   "database": "caririRifas_website", 
+   "entities": [ 
       "./src/models/*.ts"
    ],
-   "migrations": [ // diz onde est�o as migrations
+   "migrations": [ 
       "./src/database/migrations/*.ts"
    ],
-   "cli":{ //diz onde o cli do 'typeorm' vai deixar as migrations criadas com o comando 'yarn typeorm migration:create -n "nomeDaMigration"'
+   "cli":{ 
       "migrationsDir": "./src/database/migrations"
    }
 }

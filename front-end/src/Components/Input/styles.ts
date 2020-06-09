@@ -6,7 +6,7 @@ interface InputProps{ // criando uma interface chamada 'InputProps' que recebe o
 	isErrored: boolean; // diz que 'isErrored' é um booleano
 }
 
-export const Container = styled.div<InputProps>` ${/* criando uma variável 'Container' que recebe o styled, para dizer que essa variável será uma 'div' e também recebe a interface 'InputProps' */}
+export const Container = styled.div<InputProps>` /* criando uma variável 'Container' que recebe o styled, para dizer que essa variável será uma 'div' e também recebe a interface 'InputProps' */
 	background: #d1d1d1;
 	color: #666360;
 	display: flex;
@@ -42,12 +42,12 @@ export const Container = styled.div<InputProps>` ${/* criando uma variável 'Con
 
 	}
 
-	${props => props.isErrored && css` ${/* aqui diz que quando 'isErrored' for 'true', crie uma borda de 3px e com cor vermelha */}
+	${props => props.isErrored && css` /* aqui diz que quando 'isErrored' for 'true', crie uma borda de 3px e com cor vermelha */
 			border: 3px solid #C53030;
 		`}
 `;
 
-export const Error = styled(Tooltip)` ${/* aqui é criada uma variável chamada 'Error', que recebe styled que vai dizer que na verdade, essa variável está estilizando o 'Tooltip' importado de './src/components/Tooltip/index.tsx'*/}
+export const Error = styled(Tooltip)` /* aqui é criada uma variável chamada 'Error', que recebe styled que vai dizer que na verdade, essa variável está estilizando o 'Tooltip' importado de './src/components/Tooltip/index.tsx'*/
 
 	height: 20px;
 	margin-left: 16px;

@@ -6,7 +6,7 @@ interface ButtonProps{ // criando uma interface chamada 'ButtonProps' que recebe
 	estado ?: string; // diz que 'estado' não é obrigatório e que é uma string
 }
 
-export const Container = styled.div` ${/* cria uma variável chamada 'Container' e implementa dentro dela o styled, para passar a ser uma div */}
+export const Container = styled.div` /* cria uma variável chamada 'Container' e implementa dentro dela o styled, para passar a ser uma div */
 
 
 
@@ -207,9 +207,9 @@ export const Container = styled.div` ${/* cria uma variável chamada 'Container'
 
 `;
 
-export const Button = styled.button<ButtonProps>` ${/* criando uma variável chamada 'Button', e implementando dentro dela 'styled' para passar a ser um button do html e também implementando a interface 'ButtonProps' dentro da variável 'Button' */}
+export const Button = styled.button<ButtonProps>` /* criando uma variável chamada 'Button', e implementando dentro dela 'styled' para passar a ser um button do html e também implementando a interface 'ButtonProps' dentro da variável 'Button' */
 
-	${props => props.estado === "" && css` ${/* criando uma condição para caso o 'estado' seja igual a "", no caso, o código irá gerar o que está no escopo abaixo */}
+	${props => props.estado === "" && css` /* criando uma condição para caso o 'estado' seja igual a "", no caso, o código irá gerar o que está no escopo abaixo */
 		border: 0px;
 		background: transparent;
 		padding: 5.5px 1px;
@@ -226,7 +226,7 @@ export const Button = styled.button<ButtonProps>` ${/* criando uma variável cha
 		}
 	`}	
 
-	${props => props.estado === "reservado" && css` ${/* criando uma condição para caso o 'estado' seja igual a "reservado", no caso, o código irá gerar o que está no escopo abaixo */}
+	${props => props.estado === "reservado" && css` /* criando uma condição para caso o 'estado' seja igual a "reservado", no caso, o código irá gerar o que está no escopo abaixo */
 		border: 0px;
 		background: transparent;
 		padding: 5.5px 1px;
@@ -244,7 +244,7 @@ export const Button = styled.button<ButtonProps>` ${/* criando uma variável cha
 		}
 	`}
 
-	${props => props.estado === "pago" && css` ${/* criando uma condição para caso o 'estado' seja igual a "pago", no caso, o código irá gerar o que está no escopo abaixo */}
+	${props => props.estado === "pago" && css` /* criando uma condição para caso o 'estado' seja igual a "pago", no caso, o código irá gerar o que está no escopo abaixo */
 		border: 0px;
 		background: transparent;
 		padding: 5.5px 1px;
