@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'; // importando a funcionalidade 'createGlobalStyle' da biblioteca 'styled-components'
 
 
-export default createGlobalStyle`
+export default createGlobalStyle` ${/* exportando e criando uma estilização global */}
 	*{
 		margin: 0;
 		padding: 0;

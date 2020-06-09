@@ -1,12 +1,12 @@
-import styled, {css} from 'styled-components';
+import styled, {css} from 'styled-components'; // importando 'styled' e a funcionalidade 'css' da biblioteca 'styled-components'
 
-import backgroundImg from './../../../Assets/Background/background2.png';
+import backgroundImg from './../../../Assets/Background/background2.png'; // importando 'backgroundImg' para ser a imagem de fundo
 
-interface ButtonProps{
-	estado ?: string;
+interface ButtonProps{ // criando uma interface chamada 'ButtonProps' que recebe os parâmetros abaixo
+	estado ?: string; // diz que 'estado' não é obrigatório e que é uma string
 }
 
-export const Container = styled.div`
+export const Container = styled.div` ${/* cria uma variável chamada 'Container' e implementa dentro dela o styled, para passar a ser uma div */}
 
 
 
@@ -207,9 +207,9 @@ export const Container = styled.div`
 
 `;
 
-export const Button = styled.button<ButtonProps>`
+export const Button = styled.button<ButtonProps>` ${/* criando uma variável chamada 'Button', e implementando dentro dela 'styled' para passar a ser um button do html e também implementando a interface 'ButtonProps' dentro da variável 'Button' */}
 
-	${props => props.estado === "" && css`
+	${props => props.estado === "" && css` ${/* criando uma condição para caso o 'estado' seja igual a "", no caso, o código irá gerar o que está no escopo abaixo */}
 		border: 0px;
 		background: transparent;
 		padding: 5.5px 1px;
@@ -226,7 +226,7 @@ export const Button = styled.button<ButtonProps>`
 		}
 	`}	
 
-	${props => props.estado === "reservado" && css`
+	${props => props.estado === "reservado" && css` ${/* criando uma condição para caso o 'estado' seja igual a "reservado", no caso, o código irá gerar o que está no escopo abaixo */}
 		border: 0px;
 		background: transparent;
 		padding: 5.5px 1px;
@@ -244,7 +244,7 @@ export const Button = styled.button<ButtonProps>`
 		}
 	`}
 
-	${props => props.estado === "pago" && css`
+	${props => props.estado === "pago" && css` ${/* criando uma condição para caso o 'estado' seja igual a "pago", no caso, o código irá gerar o que está no escopo abaixo */}
 		border: 0px;
 		background: transparent;
 		padding: 5.5px 1px;

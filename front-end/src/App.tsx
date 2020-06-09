@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react';  // importando React da biblioteca 'react' para poder usar jsx
 
-import { BrowserRouter } from 'react-router-dom';
-import GlobalStyle from './Styles/global';
+import { BrowserRouter } from 'react-router-dom'; // importando a funcionalidade 'BrowserRouter' da biblioteca 'react-router-dom'
+import GlobalStyle from './Styles/global'; // importando a estilização global
 
-import Routes from './Routes';
+import Routes from './Routes'; // importando as rotas
 
 
 
-function App() {
+function App() { // criando um componente chamado 'App'
   return (
     <>
     	
@@ -21,4 +21,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; // exportando o componente 'App'

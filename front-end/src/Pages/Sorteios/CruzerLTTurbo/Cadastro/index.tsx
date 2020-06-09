@@ -64,8 +64,8 @@ const CadastroCruzerLTTurbo: React.FC = () => { // criando um componente chamado
 			});
 
 			if (rifaIndex >= 0){ // criando uma condicional para caso a rifa cadastrada já esteja em uso
-				setName('');
-				setPhone('');
+				setName(''); // diz para o valor da variável 'name' resetar para uma string vazia
+				setPhone(''); // diz para o valor da variável 'phone' resetar para uma string vazi
 				return alert('Está rifa já está reservada'); // caso a rifa já esteja reservada, o site retornará um alert informando isso ao usuário
 					
 			}
@@ -109,7 +109,7 @@ const CadastroCruzerLTTurbo: React.FC = () => { // criando um componente chamado
 								</Link>	
 							</div>	
 							<h1>Cadastro</h1>
-							<Form ref={formRef} onSubmit={handdleUserCadast}>
+							<Form ref={formRef} onSubmit={handdleUserCadast}> {/* iniciando um 'Form' e referenciando ele com 'ref' e passando a função que ele executará quando for enviado */}
 
 								<p>Nome Completo:</p>
 								<Input icon={IoMdPerson} value={name} onChange={e => setName(e.target.value)} name="name" placeholder="Escreva seu nome completo"/> {/* aqui é declarado um input com o valor inicial de 'name', e quando ele mudar, à partir do setName, o valor da variável 'name' receberá o que está nesse input */}
