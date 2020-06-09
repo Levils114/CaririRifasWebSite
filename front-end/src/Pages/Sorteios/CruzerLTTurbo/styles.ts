@@ -88,12 +88,33 @@ export const Container = styled.div`
 		display: flex;
 		justify-content: center;
 		text-align: center;
+		margin-top: 8px;
 
 		span{
 			font-weight: 500;
 			border-radius: 20px;
 			background: #FF2929;
-			width: 600px; 
+			width: 84%; 
+			color: #FFF;
+
+			@media(max-width: 600px){
+				font-size: 12px;
+				width: 100%;
+			}
+		}
+	}
+
+	div.alert1{
+		display: flex;
+		justify-content: center;
+		text-align: center;
+
+
+		span{
+			font-weight: 500;
+			border-radius: 20px;
+			background: #00a600;
+			width: 84%; 
 			color: #FFF;
 
 			@media(max-width: 600px){

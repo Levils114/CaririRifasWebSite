@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'; // importando 'styled'  da biblioteca 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.div`  ${/* criando uma variável 'Container' que recebe o styled, para dizer que essa variável será uma 'div' */}
 	position: relative;
 	text-align: center;
 

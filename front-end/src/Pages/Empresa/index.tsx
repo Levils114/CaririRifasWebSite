@@ -1,18 +1,18 @@
-import React from 'react';
+import React from 'react'; // importando React da biblioteca 'react' para poder usar jsx
 
-import Header from './../../Components/Header/';
-import Footer from './../../Components/Footer/';
+import Header from './../../Components/Header/'; // importando o componente de cabeçalho
+import Footer from './../../Components/Footer/'; // importando o componente do rodapé
 
-import { Container } from './styles';
+import { Container } from './styles'; // importando a variável 'Container' de './styles.ts'
 
-import {GiStairsGoal} from 'react-icons/gi';
-import {BsEye, BsStar} from 'react-icons/bs';
+import {GiStairsGoal} from 'react-icons/gi'; // importando ícones
+import {BsEye, BsStar} from 'react-icons/bs'; // importando ícones
 
-const Empresa: React.FC = () => {
+const Empresa: React.FC = () => { // criando um componente chamado 'Empresa'
 	return (
 			<Container>
 				<Header />
-					<div className="aboutUs">
+					<div className="aboutUs"> {/* div onde serão armazenados os dados de 'Quem Somos' */}
 
 						<div className="title">
 							<h1>Quem Somos</h1>
@@ -41,7 +41,7 @@ const Empresa: React.FC = () => {
 						
 					</div>
 
-					<div className="company">
+					<div className="company"> {/* div onde será armazenado tudo sobre a Missão, visão e valores da empresa */}
 
 						<div className="titleCompany">
 							<h1>Empresa</h1>
@@ -88,4 +88,4 @@ const Empresa: React.FC = () => {
 		);
 };
 
-export default Empresa;
+export default Empresa; {/* exportando o component Empresa */}

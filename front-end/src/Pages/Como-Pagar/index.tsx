@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'; // importando React da biblioteca 'react' para poder usar jsx 
 
-import { Container } from './styles';
+import { Container } from './styles'; // importando a variável 'Container' de './styles.ts'
 
-import Header from './../../Components/Header/';
-import Footer from './../../Components/Footer/';
+import Header from './../../Components/Header/'; // importando o componente de cabeçalho 
+import Footer from './../../Components/Footer/'; // importando o componente do rodapé 
 
-import img1 from './../../Assets/Como-Pagar/bradesco.jpg';
-import img2 from './../../Assets/Como-Pagar/sicredi.jpg';
-import img3 from './../../Assets/Como-Pagar/caixa.jpg';
-import img4 from './../../Assets/Como-Pagar/brasil.jpg';
+import img1 from './../../Assets/Como-Pagar/bradesco.jpg'; // importando imagem do banco
+import img2 from './../../Assets/Como-Pagar/sicredi.jpg'; // importando imagem do banco
+import img3 from './../../Assets/Como-Pagar/caixa.jpg'; // importando imagem do banco
+import img4 from './../../Assets/Como-Pagar/brasil.jpg'; // importando imagem do banco
 
-const ComoPagar: React.FC = () => {
+const ComoPagar: React.FC = () => {  // criando um componente chamado 'ComoPagar'
 	return(
 		<Container>
 			<Header />
@@ -77,4 +77,4 @@ const ComoPagar: React.FC = () => {
 		);
 }
 
-export default ComoPagar;
+export default ComoPagar; // exportando o componente 'ComoPagar'

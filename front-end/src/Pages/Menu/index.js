@@ -1,29 +1,31 @@
-import React from 'react';
+import React from 'react'; // importando React da biblioteca 'react' para poder usar jsx
 
-import Header from './../../Components/Header';
-import Footer from './../../Components/Footer';
+import Header from './../../Components/Header'; // importando o componente de cabeçalho
+import Footer from './../../Components/Footer'; // importando o componente do rodapé
 
-import Media from 'react-media';
+import Media from 'react-media'; // importando Media da biblioteca 'react-media' para poder usar media query no código
 
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'; // importando a funcionalidade 'Link' da biblioteca 'react-router-dom'
 
-import { Slide } from 'react-slideshow-image';
-import { Container, Button } from './styles';
+import { Slide } from 'react-slideshow-image'; // importando a funcionalidade 'Slide' da biblioteca 'react-slideshow-image' para poder criar um slide de imagem no código
+import { Container, Button } from './styles'; // importando as variáveis 'Container' e 'Button' de './styles.ts'
 
-import {MdPayment} from 'react-icons/md';
+import {MdPayment} from 'react-icons/md'; // importando ícones da linha 13 até a 15
 import {BsSearch, BsClock} from 'react-icons/bs';
 import {FiCheckSquare} from 'react-icons/fi';
 
-import img1 from './../../Assets/Menu/rifasdovale_1589114912.jpg';
-import img2 from './../../Assets/Menu/rifasdovale_1587692712.jpg';
-import img3 from './../../Assets/Menu/landrover_rifasdovale.jpg';
-import img4 from './../../Assets/Menu/rifasdovale_1589114665.jpg';
-import img5 from './../../Assets/Menu/rifasdovale_1588040562.jpg';
-import img6 from './../../Assets/Menu/1.jpg';
+import img1 from './../../Assets/Menu/rifasdovale_1589114912.jpg'; //importando imagem do sorteio para o slide (IMAGEM MAIOR)
+import img2 from './../../Assets/Menu/rifasdovale_1587692712.jpg'; //importando imagem do sorteio para o slide (IMAGEM MAIOR)
+import img3 from './../../Assets/Menu/landrover_rifasdovale.jpg'; //importando imagem do sorteio para o slide (IMAGEM MAIOR)
 
-import criasaLogo from './../../Assets/Menu/criasa.jpeg';
 
-const properties = {
+import img4 from './../../Assets/Menu/rifasdovale_1589114665.jpg'; //importando imagem do sorteio para o implementr dentro de 'Sorteios' que fica logo abaixo do slide (IMAGEM MENOR)
+import img5 from './../../Assets/Menu/rifasdovale_1588040562.jpg'; //importando imagem do sorteio para o implementr dentro de 'Sorteios' que fica logo abaixo do slide (IMAGEM MENOR)
+import img6 from './../../Assets/Menu/1.jpg'; //importando imagem do sorteio para o implementr dentro de 'Sorteios' que fica logo abaixo do slide (IMAGEM MENOR)
+
+import criasaLogo from './../../Assets/Menu/criasa.jpeg'; // importando a logo da Criasa
+
+const properties = { // criando a variável 'properties' que é uma array com todas as configurações para o 'Slide'. Pode ser melhor bisto na linha 46
   transitionDuration: 500,
   infinite: true,
   indicators: false,
@@ -33,15 +35,15 @@ const properties = {
 }
 
 
-const Menu = () => {
+const Menu = () => { // criando o componente 'Menu'
 	return(
 		<>
 			<Container>
 			<Header />
 
 			
-			<div className="slide-container">
-				<Slide {...properties}>
+			<div className="slide-container"> {/* iniciando a div para o slide de imagens */}
+				<Slide {...properties}> {/* iniciando o slide de imagens e logo abaixo tem todos os componentes desse slide além da imagem, como o botão, nome da marca do carro ou moto, ano e modelo. OBS: cada imagem fica dentro de uma div com classe 'each-slide', ou seja, cada slide. O slide suporta muitas divs 'each-slide', então pode ter mais do que três, mas o mínimo que ele aceita são duas, então sempre tem que ter duas ou mais */}
 		          <div className="each-slide">
 		            <div className='img-background'>
 		              <p className="marca">CHEVROLET</p>
@@ -87,7 +89,7 @@ const Menu = () => {
 
 		     <div className="divToBackground">
 
-			     <div className="sorteiosContainer">
+			     <div className="sorteiosContainer"> {/* criação do container para os sorteios */}
 			     	<div className="title">
 			     		<p className="main">SORTEIOS</p>
 			     	</div>	
@@ -97,13 +99,13 @@ const Menu = () => {
 			     	</div>
 
 			     	
-				     <div className="sorteios">
-				     	<div className="model">
-				     		<p className="emBreve">Em Breve</p>
+				     <div className="sorteios"> {/* div onde ficarão os sorteios */}
+				     	<div className="model"> {/* cada sorteio fica dentro de uma div com classe 'model', onde terá além da imagem, o nome, ano, data e etc */}
+				     		<p className="emBreve">Em Breve</p> {/* OBS: perceba que cada 'p' em cada 'model' possui uma classe, eu fiz isso para mudança de cores, então quando você quiser criar uma verde, você apenas muda a classe de 'emBreve' ou 'esgotado' para 'comprar' */}
 					     	<img src={img6} alt="sorteioImg2"/>
 					     	<p className="modelo">Range Rover</p>
 					     	<p className="data">Sorteio dia 11/05/2020</p>
-					     	<Button typeOfButton="emBreve">
+					     	<Button typeOfButton="emBreve"> {/* OBS: cada botão dentro de algum model, tem seu estilo, por isso criei esse método 'typeOfButton', que vai dizer se é 'emBreve', 'comprar' ou 'terminado', mudando assim de laranja, verde e vermelho de acordo com o que você escolher */}
 					     		<Link to="/sorteio/range-rover">Em Breve ✔</Link>
 					     	</Button>
 				     	</div>
@@ -132,7 +134,7 @@ const Menu = () => {
 
 			    
 
-			     <div className="filantropiaContainer">
+			     <div className="filantropiaContainer"> {/* Container de filantropia */}
 			     	<div className="title">
 					     <p className="main">FILANTROPIA</p>
 					</div>
@@ -157,4 +159,4 @@ const Menu = () => {
 	);
 }
 
-export default Menu;
+export default Menu; {/* exportando o componente 'Menu' */}

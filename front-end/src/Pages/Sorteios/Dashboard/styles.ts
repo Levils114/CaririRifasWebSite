@@ -1,14 +1,13 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'; // importando 'styled'  da biblioteca 'styled-components'
 
-import backgroundImg from './../../../Assets/Background/background2.png';
+import backgroundImg from './../../../Assets/Background/background2.png'; // importando 'backgroundImg' para ser a imagem de fundo
 
-interface ButtonProps{
-	typeOfButton?: string;
-	itsOn?: boolean;
+interface ButtonProps{ // criando uma interface chamada 'ButtonProps' que recebe os parâmetros abaixo
+	typeOfButton?: string; // diz que typeOfButton não é obrigatório e que é uma string
 }
 
 
-export const Container = styled.div`
+export const Container = styled.div` ${/* cria uma variável chamada 'Container' e implementa dentro dela o styled, para passar a ser uma div */}
 	
 	
 
@@ -16,7 +15,7 @@ export const Container = styled.div`
 
 `;
 
-export const Filtros = styled.div`
+export const Filtros = styled.div` ${/* cria uma variável chamada 'Filtros' e implementa dentro dela o styled, para passar a ser uma div */}
 
 	
 	height: 540px;
@@ -80,7 +79,7 @@ export const Filtros = styled.div`
 	}
 `;
 
-export const SorteiosPage = styled.div`
+export const SorteiosPage = styled.div` ${/* cria uma variável chamada 'SorteiosPage' e implementa dentro dela o styled, para passar a ser uma div */}
 
 	margin-bottom: 37px;
 	margin-top: 63px;
@@ -176,8 +175,8 @@ export const SorteiosPage = styled.div`
 	}
 `;
 
-export const Button = styled.button<ButtonProps>`
-	${props => props.typeOfButton === "comprar" && css`
+export const Button = styled.button<ButtonProps>` ${/* criando uma variável chamada 'Button', e implementando dentro dela 'styled' para passar a ser um button do html e também implementando a interface 'ButtonProps' dentro da variável 'Button' */}
+	${props => props.typeOfButton === "comprar" && css` ${/* criando uma condição para caso o 'typeOfButton' seja igual a 'comprar', no caso, o código irá gerar o que está no escopo abaixo */}
 		background: #59BA41;
 		border-radius: 16px;
 		padding: 5px 10px;
@@ -191,7 +190,7 @@ export const Button = styled.button<ButtonProps>`
 		}
 	`}
 
-	${props => props.typeOfButton === "terminado" && css`
+	${props => props.typeOfButton === "terminado" && css` ${/* criando uma condição para caso o 'typeOfButton' seja igual a 'terminado', no caso, o código irá gerar o que está no escopo abaixo */}
 		background: red;
 		border-radius: 16px;
 		padding: 5px 10px;
@@ -205,7 +204,7 @@ export const Button = styled.button<ButtonProps>`
 		}
 	`}
 
-	${props => props.typeOfButton === "emBreve" && css`
+	${props => props.typeOfButton === "emBreve" && css` ${/* criando uma condição para caso o 'typeOfButton' seja igual a 'emBreve', no caso, o código irá gerar o que está no escopo abaixo */}
 		background: orange;
 		border-radius: 16px;
 		padding: 5px 10px;

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react'; // importando 'React' e as funcionalidades 'useState', 'useEffect' e 'useRef' da biblioteca 'react'
 
 import api from './../../../../Service/api';
 

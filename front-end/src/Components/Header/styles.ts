@@ -1,12 +1,8 @@
-import styled, {css} from 'styled-components';
+import styled from 'styled-components'; // importando 'styled'  da biblioteca 'styled-components'
 
-import waves from './../../Assets/Header/waves.png';
+import waves from './../../Assets/Header/waves.png'; // importando a imagem 'waves' para uso de background
 
-interface HeaderProps{
-	isFocus?: boolean;
-}
-
-export const FirstHeader = styled.div`
+export const FirstHeader = styled.div` ${/* criando a variável FirstHeader e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */}
 	display: flex;
 	background: #2e2e2e;
 	height: 30px;
@@ -90,7 +86,7 @@ export const FirstHeader = styled.div`
 `;
 
 
-export const HeaderPrimary = styled.div<HeaderProps>`
+export const HeaderPrimary = styled.div` ${/* criando a variável HeaderPrimary e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */}
 	background: #131313 url(${waves}) bottom no-repeat ;
 	height: 112px;
 
@@ -222,12 +218,10 @@ export const HeaderPrimary = styled.div<HeaderProps>`
 	    }
 	  }
 
-	  ${props => props.isFocus && css`
-
-	  	`}
+	
 `;
 
-export const NavBar = styled.div`
+export const NavBar = styled.div` ${/* criando a variável NavBar e implementando dentro dela 'styled' e dizendo que ela é na verdade uma div */}
 
 	background: #121212;
 	display: flex;

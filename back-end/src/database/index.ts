@@ -1,3 +1,3 @@
 import { createConnection } from 'typeorm';
 
-createConnection();
+createConnection(); // crianda a conexão com o banco de dados

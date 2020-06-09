@@ -1,22 +1,22 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react'; // importando 'React' e as funcionalidades 'useState' e 'useEffect' da biblioteca 'react'
 
-import api from './../../../Service/api';
+import api from './../../../Service/api'; // importando a variável 'api', no caso, a variável que faz conexão com o banco de dados
 
-import {Container, Button} from './styles';
+import {Container, Button} from './styles'; // importando as variáveis 'Container' e 'Button' de './styles.ts'
 
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'; // importando a funcionalidade 'Link' de 'react-router-dom'
 
-import Header from './../../../Components/Header/';
-import Footer from './../../../Components/Footer/';
+import Header from './../../../Components/Header/'; // importando o componente de cabeçalho 
+import Footer from './../../../Components/Footer/'; // importando o componente do rodapé
 
-import {Slide} from 'react-slideshow-image';
+import {Slide} from 'react-slideshow-image'; // importando a funcionalidade 'Slide' da biblioteca 'react-slideshow-image' para poder criar um slide de imagem no código
 
-import img1 from './../../../Assets/Sorteios/Lander255CC/1.jpg';
+import img1 from './../../../Assets/Sorteios/Lander255CC/1.jpg'; // importando imagem da moto que será sorteada
 
 
-const Lander255CC = () => {
+const Lander255CC = () => { //criando um componente chamado 'Lander255CC'
 
-	const properties = {
+	const properties = { // criando a variável 'properties' que é uma array com todas as configurações para o 'Slide'. Pode ser melhor bisto na linha 74
 	  transitionDuration: 500,
 	  indicators: true,
 	  infinite: true,
@@ -26,13 +26,13 @@ const Lander255CC = () => {
 	  
 	}
 
-	const [users, setUsers] = useState([]);
-	const correctUsers = users.filter(user => user.sorteio === "Lander 255 CC")
-	const correctRifa = correctUsers.map(user => user.rifa);
+	const [users, setUsers] = useState([]); // criando uma variável chamada 'users' e outra chamada 'setUsers', e implementado o useState dentro delas. O que o useState vai fazer é adicionar valores a variável 'users' à partir de 'setUsers', nesse caso, a variável inicia com um array vazio
+	const correctUsers = users.filter(user => user.sorteio === "Lander 255 CC") // é criado uma variável 'correctUsers' onde é implementado um filtro em 'users' para encontrar aqueles que o sorteio for igual 'Lander 255 CC', no caso, o sorteio da página. OBS, esse nome do sorteio tem que ser OBRIGATORIAMENTE o mesmo nome que declarado na tela de cadastro, se não, não funciona, ou seja, OBRIGATORIAMENTE, na criação de um novo sorteio, esse valor sempre mudará
+	const correctRifa = correctUsers.map(user => user.rifa); // é criado uma variável 'correctRifa' que mapeia as rifas encontradas em 'correctUsers'
 
-	let correctUsersByRifa = {};
+	let correctUsersByRifa = {}; // criando um variável 'correctUsersByRifa' e declarando ela como um objeto vazio 
 	
-	correctUsers.forEach(user => {
+	correctUsers.forEach(user => { // dessa linha até a linha 62 nada mais é do que a criação de um gerador de rifas com um limite de 999 rifas, esse valor pode ser mudado na linha 39
 		  correctUsersByRifa[user.rifa] = user;
 	});
 
@@ -61,16 +61,16 @@ const Lander255CC = () => {
 	  });
 	}
 
-	useEffect(() => {
-		api.get('/users').then(response => {setUsers(response.data)});
+	useEffect(() => { // aqui é utilizado o 'useEffect' para chamar o backend da aplicação
+		api.get('/users').then(response => {setUsers(response.data)}); // aqui lista todos os usuários achados no banco de dados e os armazena na variável 'users'
 	}, []);
 
 
 	return (
 		<Container>
 			<Header />
-				<div className="datas">
-					<div className="slider">
+				<div className="datas"> {/* aqui é declarada uma variável chamada 'datas', onde ficarão os dados do que está sendo sorteado, como imagens, nome, ano, modelo e etc */}
+					<div className="slider"> {/* aqui é declarado a div para o slide de imagens */}
 						<Slide {...properties}>
 							<img src={img1} alt="img1"/>
 							<img src={img1} alt="img1"/>
@@ -78,7 +78,7 @@ const Lander255CC = () => {
 						</Slide>
 					</div>	
 
-					<div className="description">
+					<div className="description"> {/* aqui é declarado a div para a descrição do produto */}
 						<h3>Lander 255 CC</h3>
 
 						<div className="divisor">
@@ -118,4 +118,4 @@ const Lander255CC = () => {
 		);
 }
 
-export default Lander255CC;
+export default Lander255CC; // exportando o componente Lander255CC

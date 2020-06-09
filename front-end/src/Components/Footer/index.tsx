@@ -1,25 +1,24 @@
-import React from 'react';
+import React from 'react';  // importando todas as funcionalidades da biblioteca 'react' para 'React'
 
-import { FooterPrimary } from './styles';
+import { FooterPrimary } from './styles'; // importando a variável 'FooterPrimary' de './styles.ts'
 
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'; // importando a funcionalidade 'Link' de 'react-router-dom'
 
-import {AiOutlineWhatsApp, AiOutlineInstagram} from 'react-icons/ai';
-import {MdEmail} from 'react-icons/md';
-import {MdPayment} from 'react-icons/md';
-import {BsSearch, BsClock} from 'react-icons/bs';
-import {FiCheckSquare} from 'react-icons/fi';
+import {AiOutlineWhatsApp, AiOutlineInstagram} from 'react-icons/ai'; //importando ícones do isntagram e whatsapp
+import {MdPayment} from 'react-icons/md'; // importando ícone de cartão de crédito
+import {BsSearch, BsClock} from 'react-icons/bs'; // importando ícones de pesquisa e de relógio
+import {FiCheckSquare} from 'react-icons/fi'; // importando ícone de check box
 
-import img1 from './../../Assets/Como-Pagar/bradesco.jpg';
-import img2 from './../../Assets/Como-Pagar/sicredi.jpg';
-import img3 from './../../Assets/Como-Pagar/caixa.jpg';
-import img4 from './../../Assets/Como-Pagar/brasil.jpg';
+import img1 from './../../Assets/Como-Pagar/bradesco.jpg'; // importando imagem do bradesco
+import img2 from './../../Assets/Como-Pagar/sicredi.jpg'; // importando imagem da sicredi
+import img3 from './../../Assets/Como-Pagar/caixa.jpg'; // importando imagem da caixa
+import img4 from './../../Assets/Como-Pagar/brasil.jpg'; // importando imagem do banco do brasil
 
 
-const Footer: React.FC = () => {
-	return (
-			<>
-				<FooterPrimary>
+const Footer: React.FC = () => { // criando o componente de rodapé e colocando o nome de 'Footer'
+	return ( // diz para o componente retornar rodo o código abaixo
+			<> 
+				<FooterPrimary> {/* criando uma div, chamada de FooterPrimary que é importada de './styles.ts'  */}
 					<div className="etapas">
 			     		
 						    
@@ -93,14 +92,14 @@ const Footer: React.FC = () => {
 
 				<div className="links">
 					<div className="box">
-						<a href="https://api.whatsapp.com/send?phone=+5588998139342">
+						<a href="https://api.whatsapp.com/send?phone=+">
 							<AiOutlineWhatsApp size={22} />
 							<p>ENTRE NO NOSSO GRUPO DO WHATSAPP</p>
 						</a>
 					</div>
 
 					<div className="box">
-						<a href="https://www.instagram.com/cariririfas">
+						<a href="https://www.instagram.com/cariridepremios/">
 							<AiOutlineInstagram size={22} />
 							<p>NOS ACOMPANHE NO INSTAGRAM</p>
 						</a>
@@ -113,4 +112,4 @@ const Footer: React.FC = () => {
 		);
 }
 
-export default Footer;
+export default Footer; // exportando o componente Footer
